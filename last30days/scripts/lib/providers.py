@@ -235,22 +235,186 @@ def mock_runtime(config: dict[str, Any], depth: str) -> schema.ProviderRuntime:
     )
 
 
+def _build_provider_client(
+    provider_name: str,
+    config: dict[str, Any],
+    depth: str,
+    google_key: str | None,
+    openai_token: str | None,
+    xai_key: str | None,
+) -> tuple[schema.ProviderRuntime, ReasoningClient] | None:
+    """Attempt to build a runtime+client for one named reasoning provider.
+
+    Returns ``None`` (instead of raising) when the provider is unsupported or
+    its required credential is missing, so ``resolve_runtime`` can fall through
+    to the next candidate in an ordered failover chain. The client
+    constructors only capture the key; no network call happens here.
+    """
+    if provider_name not in _MODEL_DEFAULTS:
+        return None
+
+    planner_model, rerank_model = _resolve_model_pins(config, depth, provider_name)
+    x_backend = _resolve_x_backend(config)
+
+    if provider_name == "gemini":
+        if not google_key:
+            return None
+        return (
+            schema.ProviderRuntime(
+                reasoning_provider="gemini",
+                planner_model=planner_model,
+                rerank_model=rerank_model,
+                x_search_backend=x_backend,
+            ),
+            GeminiClient(google_key),
+        )
+
+    if provider_name == "openai":
+        if not openai_token or config.get("OPENAI_AUTH_STATUS") != env.AUTH_STATUS_OK:
+            return None
+        return (
+            schema.ProviderRuntime(
+                reasoning_provider="openai",
+                planner_model=planner_model,
+                rerank_model=rerank_model,
+                x_search_backend=x_backend,
+            ),
+            OpenAIClient(openai_token),
+        )
+
+    if provider_name == "xai":
+        if not xai_key:
+            return None
+        return (
+            schema.ProviderRuntime(
+                reasoning_provider="xai",
+                planner_model=planner_model,
+                rerank_model=rerank_model,
+                x_search_backend=x_backend,
+            ),
+            XAIClient(xai_key),
+        )
+
+    if provider_name == "openrouter":
+        openrouter_key = config.get("OPENROUTER_API_KEY")
+        if not openrouter_key:
+            return None
+        return (
+            schema.ProviderRuntime(
+                reasoning_provider="openrouter",
+                planner_model=planner_model,
+                rerank_model=rerank_model,
+                x_search_backend=x_backend,
+            ),
+            OpenRouterClient(openrouter_key),
+        )
+
+    return None
+
+
+class FallbackReasoningClient(ReasoningClient):
+    """Wrap an ordered list of reasoning clients with call-time failover.
+
+    ``resolve_runtime`` builds one of these when more than one provider is
+    configured (e.g. ``LAST30DAYS_REASONING_PROVIDER=openrouter,gemini``). Each
+    ``generate_*`` call tries the candidates in order. If a candidate fails with
+    a *retryable* HTTP error — most importantly HTTP 402 Payment Required, which
+    fires when a key is present but unfunded/credit-exhausted — the next
+    candidate is tried instead of raising immediately. Only after every candidate
+    fails is the last error re-raised, which the planner/reranker catch and turn
+    into their deterministic fallback.
+
+    This makes the primary->fallback chain real at runtime, not just at
+    key-presence time: an unfunded OpenRouter key no longer silently degrades
+    the whole run to local mode when a funded Gemini key is also configured.
+    """
+
+    def __init__(self, pairs: list[tuple[schema.ProviderRuntime, ReasoningClient]]):
+        # pairs: ordered (runtime, client). First pair's runtime supplies model
+        # pins; model selection is provider-agnostic here (both default to the
+        # same Gemini Flash Lite tier).
+        self._pairs = pairs
+
+    @property
+    def name(self) -> str:
+        return ",".join(p[0].reasoning_provider for p in self._pairs)
+
+    @staticmethod
+    def _retryable(exc: BaseException) -> bool:
+        if isinstance(exc, http.HTTPError):
+            code = exc.status_code
+            if code is None:
+                return False
+            # 401/402/403 = auth/billing; 429 = rate; 5xx = upstream outage.
+            return code in (401, 402, 403, 429) or 500 <= code <= 599
+        # Transient network errors also warrant a retry on the next provider.
+        return isinstance(exc, (OSError, ConnectionError, TimeoutError))
+
+    def _run(self, method: str, model: str, prompt: str, **kwargs: Any) -> Any:
+        last_exc: BaseException | None = None
+        for _runtime, client in self._pairs:
+            try:
+                return getattr(client, method)(model, prompt, **kwargs)
+            except Exception as exc:  # noqa: BLE001 - we re-raise if all fail
+                last_exc = exc
+                if self._retryable(exc):
+                    continue
+                raise
+        if last_exc is not None:
+            raise last_exc
+        raise RuntimeError("FallbackReasoningClient had no candidate clients")
+
+    def generate_text(
+        self,
+        model: str,
+        prompt: str,
+        *,
+        tools: list[dict[str, Any]] | None = None,
+        response_mime_type: str | None = None,
+    ) -> str:
+        return self._run(
+            "generate_text", model, prompt,
+            tools=tools, response_mime_type=response_mime_type,
+        )
+
+    def generate_json(
+        self,
+        model: str,
+        prompt: str,
+        *,
+        tools: list[dict[str, Any]] | None = None,
+    ) -> dict[str, Any]:
+        return self._run("generate_json", model, prompt, tools=tools)
+
+
 def resolve_runtime(config: dict[str, Any], depth: str) -> tuple[schema.ProviderRuntime, ReasoningClient | None]:
-    """Resolve the reasoning provider and pinned models."""
-    provider_name = (config.get("LAST30DAYS_REASONING_PROVIDER") or "auto").lower()
+    """Resolve the reasoning provider and pinned models, with failover.
+
+    ``LAST30DAYS_REASONING_PROVIDER`` accepts an ordered, comma-separated list
+    of provider names (e.g. ``"openrouter,gemini"``). Every candidate whose
+    required credential is present is built; they are wrapped in a
+    ``FallbackReasoningClient`` that retries calls across them at runtime. This
+    gives a real primary->fallback chain: an unfunded/exhausted primary (HTTP
+    402) falls through to the next configured provider instead of degrading the
+    whole run to deterministic-local mode.
+
+    ``"auto"`` (the default) resolves to a single provider by credential
+    availability, preserving historical behavior.
+    """
+    raw = (config.get("LAST30DAYS_REASONING_PROVIDER") or "auto").lower()
     google_key = config.get("GOOGLE_API_KEY") or config.get("GEMINI_API_KEY") or config.get("GOOGLE_GENAI_API_KEY")
     openai_token = config.get("OPENAI_API_KEY")
     xai_key = config.get("XAI_API_KEY")
 
-    if provider_name == "auto":
+    if raw == "auto":
         if google_key:
-            provider_name = "gemini"
+            candidates = ["gemini"]
         elif openai_token and config.get("OPENAI_AUTH_STATUS") == env.AUTH_STATUS_OK:
-            provider_name = "openai"
+            candidates = ["openai"]
         elif xai_key:
-            provider_name = "xai"
+            candidates = ["xai"]
         elif config.get("OPENROUTER_API_KEY"):
-            provider_name = "openrouter"
+            candidates = ["openrouter"]
         else:
             return schema.ProviderRuntime(
                 reasoning_provider="local",
@@ -258,60 +422,30 @@ def resolve_runtime(config: dict[str, Any], depth: str) -> tuple[schema.Provider
                 rerank_model="local-score",
                 x_search_backend=_resolve_x_backend(config),
             ), None
+    else:
+        candidates = [p.strip() for p in raw.split(",") if p.strip()]
 
-    planner_model, rerank_model = _resolve_model_pins(config, depth, provider_name)
-
-    if provider_name == "gemini":
-        if not google_key:
-            raise RuntimeError("Gemini selected but no Google API key is configured.")
-        runtime = schema.ProviderRuntime(
-            reasoning_provider="gemini",
-            planner_model=planner_model,
-            rerank_model=rerank_model,
-    
-            x_search_backend=_resolve_x_backend(config),
+    pairs: list[tuple[schema.ProviderRuntime, ReasoningClient]] = []
+    for provider_name in candidates:
+        built = _build_provider_client(
+            provider_name, config, depth, google_key, openai_token, xai_key
         )
-        return runtime, GeminiClient(google_key)
+        if built is not None:
+            pairs.append(built)
 
-    if provider_name == "openai":
-        if not openai_token or config.get("OPENAI_AUTH_STATUS") != env.AUTH_STATUS_OK:
-            raise RuntimeError("OpenAI selected but no valid OpenAI auth is configured.")
-        runtime = schema.ProviderRuntime(
-            reasoning_provider="openai",
-            planner_model=planner_model,
-            rerank_model=rerank_model,
-    
-            x_search_backend=_resolve_x_backend(config),
-        )
-        return runtime, OpenAIClient(
-            openai_token
+    if not pairs:
+        raise RuntimeError(
+            "No usable reasoning provider among: "
+            + ", ".join(candidates)
+            + ". Check the relevant API keys (GOOGLE/GEMINI, OPENAI, XAI, OPENROUTER)."
         )
 
-    if provider_name == "xai":
-        if not xai_key:
-            raise RuntimeError("xAI selected but XAI_API_KEY is not configured.")
-        runtime = schema.ProviderRuntime(
-            reasoning_provider="xai",
-            planner_model=planner_model,
-            rerank_model=rerank_model,
-    
-            x_search_backend=_resolve_x_backend(config),
-        )
-        return runtime, XAIClient(xai_key)
+    # Single candidate: return it directly (no wrapper overhead).
+    if len(pairs) == 1:
+        return pairs[0]
 
-    if provider_name == "openrouter":
-        openrouter_key = config.get("OPENROUTER_API_KEY")
-        if not openrouter_key:
-            raise RuntimeError("OpenRouter selected but OPENROUTER_API_KEY is not configured.")
-        runtime = schema.ProviderRuntime(
-            reasoning_provider="openrouter",
-            planner_model=planner_model,
-            rerank_model=rerank_model,
-            x_search_backend=_resolve_x_backend(config),
-        )
-        return runtime, OpenRouterClient(openrouter_key)
-
-    raise RuntimeError(f"Unsupported reasoning provider: {provider_name}")
+    first_runtime = pairs[0][0]
+    return first_runtime, FallbackReasoningClient(pairs)
 
 
 def _resolve_x_backend(config: dict[str, Any]) -> str | None:

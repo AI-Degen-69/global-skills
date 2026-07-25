@@ -221,6 +221,19 @@ Before declaring done, **screenshot and verify**:
 - [ ] Dark and light modes both **look designed** (not inverted defaults)
 - [ ] **Signature element** exists — the one thing you'd remember
 
+### 9.1 Mandatory `hallmark audit` gate (post-UI)
+
+If the `hallmark` skill is installed (it is, in this profile), the design is NOT done until a `hallmark audit` pass has run over the emitted artifact and returned a clean (or fixed) slop-test result. This is the enforcement layer for the anti-patterns in §10 — Hallmark codifies them as 58 discrete gates, so we run them rather than eyeball them.
+
+**Procedure (run AFTER the screenshot verify above, before closeout):**
+
+1. Load `hallmark` (`skill_view(name='hallmark')`).
+2. Run the `audit` verb over the emitted page/CSS: score it against `references/slop-test.md` (58 gates) + `references/anti-patterns.md`.
+3. If any gate fails → fix the emitted CSS/markup, re-run the audit. Do **not** declare done with open slop gates.
+4. Report the slop-test outcome in closeout (pass class + any fixed gates), exactly like the §9 screenshot verify.
+
+**Why this is non-optional:** §10 already lists Inter+slate, gradient-text, 3-col grids, etc. as failures — but a self-check is easy to skip under time pressure. `hallmark audit` turns that into a verifiable gate with a fixed checklist, consistent across every UI this profile emits. The `hallmark` skill is a faithful port of `Nutlope/hallmark` (MIT) living at `~/AppData/Local/hermes/skills/hallmark/`; invoke by intent (build / audit / redesign / study), there is no CLI binary in Hermes.
+
 ---
 
 ## 10. Anti-Patterns (What to Actively Avoid)
@@ -249,9 +262,9 @@ Before declaring done, **screenshot and verify**:
 ## 12. Handoff to Implementation
 
 If you're designing for another agent to build:
-
 1. **Produce the design plan** (tokens, wireframes, signature element)
 2. **Annotate** component hierarchy and states
 3. **Specify** exact CSS custom properties
 4. **Flag** any non-standard browser APIs needed
 5. **Verify** the built result against screenshots
+6. **Run the `hallmark audit` gate** (§9.1) over the built result before sign-off — the 58-gate slop test is the pass/fail bar, not the screenshot alone.

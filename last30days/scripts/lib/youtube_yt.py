@@ -151,7 +151,32 @@ def is_ytdlp_installed() -> bool:
     """
     if _ytdlp_ssh_host():
         return True
-    return shutil.which("yt-dlp") is not None
+    if shutil.which("yt-dlp") is not None:
+        return True
+    # Fallback: the console script may not be on PATH, but the importable
+    # module (runnable via `python3 -m yt_dlp`) still works. Accept that so
+    # YouTube search isn't silently dropped just because `yt-dlp` isn't on
+    # the shell PATH.
+    try:
+        import importlib.util  # noqa: F401
+        return importlib.util.find_spec("yt_dlp") is not None
+    except Exception:
+        return False
+
+
+def _ytdlp_bin() -> List[str]:
+    """Resolve the yt-dlp executable as a command prefix.
+
+    Returns either ``["yt-dlp"]`` (when the console script is on PATH) or
+    ``[sys.executable, "-m", "yt_dlp"]`` (when only the importable module is
+    available). Using an explicit prefix avoids ``FileNotFoundError`` when the
+    spawned subprocess inherits a PATH that omits the directory containing the
+    ``yt-dlp`` script — the module is always reachable through the interpreter
+    that is already running this skill.
+    """
+    if shutil.which("yt-dlp") is not None:
+        return ["yt-dlp"]
+    return [sys.executable, "-m", "yt_dlp"]
 
 
 # Host aliases must be plain hostnames / SSH config aliases — no flags, no
@@ -307,7 +332,7 @@ def search_youtube(
     # relevance-sorted results and strict date filtering returns 0 for
     # evergreen topics. Python soft filter (below) handles date filtering.
     cmd = [
-        "yt-dlp",
+        *_ytdlp_bin(),
         "--ignore-config",
         "--no-cookies-from-browser",
         f"ytsearch{count}:{core_topic}",
@@ -639,7 +664,7 @@ def _fetch_transcript_ytdlp(
         On a hard (non-no-caption) failure, sets ``status["ytdlp_error"]``.
     """
     cmd = [
-        "yt-dlp",
+        *_ytdlp_bin(),
         "--ignore-config",
         "--no-cookies-from-browser",
         "--write-auto-subs",
@@ -982,10 +1007,20 @@ def search_and_transcribe(
         )
         candidate_ids = [item["video_id"] for item in transcript_candidates[:attempt_count]]
         _log(f"Fetching transcripts for up to {attempt_count} videos (target: {transcript_limit}): {candidate_ids}")
-        transcripts = fetch_transcripts_parallel(
-            candidate_ids, out_captions_disabled=captions_disabled_ids,
-            token=token,
-        )
+        try:
+            transcripts = fetch_transcripts_parallel(
+                candidate_ids, out_captions_disabled=captions_disabled_ids,
+                token=token,
+            )
+        except Exception as exc:  # noqa: BLE001 - transcript failure must not
+            # discard already-found videos. A timeout/hang in the yt-dlp
+            # transcript subprocess would otherwise propagate out of
+            # search_and_transcribe and the caller's broad except would drop
+            # the entire YouTube result set to zero. Treat transcript failure
+            # as "no transcripts" and let Step 3 fall back to empty snippets.
+            import sys
+            _log(f"Transcript fetch failed ({type(exc).__name__}: {exc}); continuing with search results only")
+            transcripts = {}
         # Record fetch outcomes (captions-disabled videos can never succeed,
         # so they don't count as failures) for the stale-yt-dlp nudge.
         _TRANSCRIPT_FETCH_STATS["attempts"] += len(candidate_ids)

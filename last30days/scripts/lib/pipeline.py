@@ -1402,7 +1402,10 @@ def _retrieve_stream(
             if env.is_youtube_sc_available(config) else None
         )
         # Try yt-dlp first; the SC transcript fallback covers per-video failures.
-        if which("yt-dlp"):
+        # Use the module-aware check so the importable `yt_dlp` (run via
+        # `python3 -m yt_dlp`) counts as installed even when the `yt-dlp`
+        # console script isn't on the spawned subprocess's PATH.
+        if youtube_yt.is_ytdlp_installed():
             try:
                 result = youtube_yt.search_and_transcribe(
                     yt_query, from_date, to_date, depth=depth, token=sc_token,

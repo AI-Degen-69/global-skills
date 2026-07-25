@@ -75,6 +75,16 @@ def normalize_source_items(
     filtered = filter_by_date_range(normalized, from_date, to_date, require_date=require_date)
     if filtered:
         return filtered
+    if source == "youtube":
+        # YouTube videos are inherently evergreen: a 2016 explainer of
+        # VUCA/BANI is still valid evidence. The date-window purge must never
+        # zero out YouTube on its own — doing so silently drops every result
+        # when the planner picks a non-evergreen freshness mode (e.g.
+        # balanced_recent) for a concept query. Keep all discovered videos
+        # rather than returning an empty list.
+        if require_date:
+            return [item for item in normalized if item.published_at]
+        return normalized
     if freshness_mode == "evergreen_ok" and source == "youtube":
         if require_date:
             return [item for item in normalized if item.published_at]

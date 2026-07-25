@@ -8,3 +8,10 @@
 # OS noise
 .DS_Store
 Thumbs.db
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Curator backup archives (too large for GitHub)
+.curator_backups/

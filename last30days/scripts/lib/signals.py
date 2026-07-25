@@ -314,11 +314,24 @@ def prune_low_relevance(
     sources_present = {item.source for item in items}
 
     def passes(item: schema.SourceItem) -> bool:
-        # YouTube items with successfully extracted transcripts should not
-        # be pruned by title-only relevance scoring — the transcript content
-        # already proves substantive topical coverage.
-        if item.source == "youtube" and item.snippet:
-            return True
+        # YouTube items should not be pruned purely on weak title-overlap
+        # relevance when they demonstrably cover the topic. The strongest
+        # signal is an extracted transcript (snippet), but transcripts are
+        # frequently absent — quick depth skips them, and the paid
+        # ScrapeCreators transcript path returns HTTP 402 here. When no
+        # transcript exists, fall back to a real-title + meaningful-views
+        # heuristic: a video that has a title and has cleared YouTube's
+        # minimum traction floor is a substantive result, not lexical noise,
+        # and must survive pruning. Without this, narrowing the ranking
+        # query (e.g. an LLM planner's precise subquery) drops every YouTube
+        # hit to zero videos in the report.
+        if item.source == "youtube":
+            if item.snippet:
+                return True
+            title = (item.title or "").strip()
+            views = (item.engagement or {}).get("views", 0) or 0
+            if title and views >= 1000:
+                return True
         rel = item.local_relevance if item.local_relevance is not None else 0.0
         if rel < minimum:
             return False
