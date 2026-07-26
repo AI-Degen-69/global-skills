@@ -87,7 +87,7 @@ if __name__ == "__main__":
     sys.exit(main())
 ```
 Route bash's console children through it:
-- `git` → `"$HERE/run_hidden.py" git add -A` etc. (covers `vault_autopush.sh`)
+- `git` → `"$HERE/run_hidden.py" git add -A` etc. (the `vault_autopush.sh` wrapper that used this pattern was retired to `hermes/scripts/.trash/` on 2026-07-26; the `vault_autopush.py` port remains the live job and runs `git` directly)
 - python children in `.sh` → use `pythonw` (GUI subsystem, never allocates a console) instead of `python.exe`/`python3.14`.
 
 Note: `cygstart` is **missing** on this MSYS install — don't rely on it; `pythonw` + `run_hidden.py` is the reliable path.

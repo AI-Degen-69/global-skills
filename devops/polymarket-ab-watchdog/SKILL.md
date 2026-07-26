@@ -110,7 +110,9 @@ req = urllib.request.Request(
 
 ## Reference implementation (full working script)
 
-Live copy: `~/AppData/Local/hermes/scripts/ab_watchdog.py`. The skeleton:
+> ⚠️ `ab_watchdog.py` was retired and moved to `hermes/scripts/.trash/` (2026-07-26). The polymarket-bot workflow is dormant. The skeleton below is historical reference only.
+
+Live copy (retired): `~/AppData/Local/hermes/scripts/.trash/ab_watchdog.py`. The skeleton:
 
 ```python
 import os, sys, json, math, datetime, urllib.request, urllib.error
@@ -192,21 +194,7 @@ No double-post.
 - ❌ Don't show z/edge before TARGET resolved — meaningless before then.
 - ✅ Webhook self-delivery + `no_agent`/`deliver:local` cron = reliable emoji.
 
-## Companion lint: `scripts/cron_delivery_lint.py`
-
-A standalone check that hunts the trap across ALL crons (not just this one),
-so future emoji crons skip the silent-drop. It flags any job that is
-`no_agent:true` + `deliver:"discord:CHANNEL"` whose script emits non-ASCII
-(emoji/box chars) AND does not self-deliver (no webhook / `hermes send` /
-outbound POST). It INFOs (not flags) jobs that self-deliver but still have
-`deliver:"discord:..."` (redundant → double-post risk; switch to `local`).
-
-Run after editing crons:
-
-    python scripts/cron_delivery_lint.py
-    # or:  python scripts/cron_delivery_lint.py --jobs /path/to/jobs.json
-
-Exit: 0 = clean, 1 = trap found, 2 = usage/IO error.
+> ⚠️ `cron_delivery_lint.py` was retired and moved to `hermes/scripts/.trash/` (2026-07-26). The companion-lint section below is historical reference only; do not run it against current crons.
 
 When first written it caught two pre-existing traps the user didn't know
 about: `c24a9a0e6970` (skill-trend, ⭐🔥🌐💡) and `b96fbcc734a0` (gbrain

@@ -8,6 +8,8 @@ metadata:
 
 # Deploy to Vercel
 
+> **Fast mode**: For preview deployments (the default), dispatch to the `deploy-to-vercel-worker` subagent (Haiku) via the Agent tool. For production, use this skill inline — it will escalate the decision to you.
+
 Deploy any project to Vercel. **Always deploy as preview** (not production) unless the user explicitly asks for production.
 
 The goal is to get the user into the best long-term setup: their project linked to Vercel with git-push deploys. Every method below tries to move the user closer to that state.

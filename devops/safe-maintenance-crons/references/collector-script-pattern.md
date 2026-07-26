@@ -68,4 +68,4 @@ DENYLIST_EXACT = {
 
 ## Applied Example
 
-See `hermes-cleanup-collector.py` in `C:/Users/Tiger/AppData/Local/hermes/scripts/` for the working implementation used by `hermes-cleanup-daily` cron.
+> ⚠️ `hermes-cleanup-collector.py` was retired and moved to `hermes/scripts/.trash/` (2026-07-26). It was NOT actually referenced by `hermes-cleanup-daily.py` (doc was stale). Historical reference only.

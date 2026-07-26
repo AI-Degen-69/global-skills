@@ -2,10 +2,12 @@
 
 ## Script-path rule
 For Hermes cron jobs on this Windows host, prefer:
-- `--script check-uptime.py`
+- `--script <name>.py`
 
 Avoid preserving a literal scheduler path form like:
-- `--script ~/.hermes/scripts/check-uptime.py`
+- `--script ~/.hermes/scripts/<name>.py`
+
+> ⚠️ `check-uptime.py` was retired and moved to `hermes/scripts/.trash/` (2026-07-26); the original example referenced a script that no longer exists.
 
 The scheduler resolves script names from its scripts directory; the relative form is the reliable default.
 

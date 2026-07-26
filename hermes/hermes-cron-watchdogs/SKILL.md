@@ -90,7 +90,9 @@ If a watchdog monitors a service that is intentionally restarted by a known sche
 8. **When the user asks what a cron job does, explain the job behavior before the implementation.** Lead with: when it runs, what it checks/cleans/sends, and what happens when something is wrong. Keep it non-technical unless the user asks for internals.
 
 ## Windows Hermes host pitfall
-When creating Hermes cron jobs whose scripts live under `~/.hermes/scripts`, pass the script as the scheduler-relative name (example: `--script check-uptime.py`) instead of a literal `~/.hermes/scripts/check-uptime.py` path. The scheduler resolves scripts from its scripts directory; the relative form is the reliable one to preserve first.
+When creating Hermes cron jobs whose scripts live under `~/.hermes/scripts`, pass the script as the scheduler-relative name (example: `--script <name>.py`) instead of a literal `~/.hermes/scripts/<name>.py` path. The scheduler resolves scripts from its scripts directory; the relative form is the reliable one to preserve first.
+
+> ⚠️ `check-uptime.py` was retired and moved to `hermes/scripts/.trash/` (2026-07-26); the example above uses a placeholder, not a live script.
 
 ## User-visible shell mismatch pitfall
 On this Windows setup, **the agent's `terminal` tool may run through bash while the user's visible terminal pane is PowerShell**. Do not assume they are the same shell.
