@@ -1,6 +1,6 @@
 ---
 name: beautify-github-readme
-description: Redesign GitHub README homepages or create standalone GitHub-safe SVG and animated GIF assets around a repository's real theme. Use when a user asks to beautify, redesign, rebrand, visually upgrade, simplify, or audit a GitHub README; create only a hero, section headers, diagrams, badges, motion graphics, showcase modules, or other README assets; or turn a repository homepage into a cohesive visual story. If the request does not clearly distinguish whole-README work from asset-only work, ask which scope the user wants before editing anything.
+description: Use when a user asks to beautify, redesign, rebrand, visually upgrade, simplify, or audit a GitHub README; cre
 ---
 
 # Beautify GitHub README

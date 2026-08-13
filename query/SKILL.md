@@ -1,10 +1,7 @@
 ---
 name: query
 version: 1.0.0
-description: |
-  Answer questions using the brain's knowledge with 3-layer search, synthesis,
-  and citation propagation. Use when the user asks a question, wants a lookup,
-  or needs information from the brain.
+description: Use when the user asks a question, wants a lookup
 triggers:
   - "what do we know about"
   - "tell me about"

@@ -1,9 +1,7 @@
 ---
 name: repo-architecture
 version: 1.0.0
-description: |
-  Where new brain files go. Decision protocol for filing brain pages by primary
-  subject, not by format or source. Reference for all brain-writing skills.
+description: Use when deciding where a new brain page belongs by primary subject (filing rules).
 triggers:
   - "where does this go"
   - "filing rules"

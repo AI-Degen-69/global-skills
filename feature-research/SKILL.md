@@ -1,6 +1,6 @@
 ---
 name: feature-research
-description: Research existing architecture before implementing a complex feature.
+description: Use when researching architecture before implementing a feature.
 metadata:
   author: morph
   version: "0.1.0"

@@ -1,7 +1,7 @@
 ---
 name: diagram
 version: 1.0.0
-description: "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)"
+description: Use when the user wants a diagram drawn on excalidraw, exported as SVG/PNG.
 allowed-tools:
   - Bash
   - Read

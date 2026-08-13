@@ -1,6 +1,6 @@
 ---
 name: project-onboarding-audit
-description: "Investigate an unfamiliar project, internalize its documentation, verify implementation shape, and recommend missing agent/project guidance files."
+description: Use when onboarding to an unfamiliar project and auditing its docs and structure.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

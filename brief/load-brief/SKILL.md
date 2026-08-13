@@ -1,6 +1,6 @@
 ---
 name: load-brief
-description: Use when starting a new session to load the most recent brief file from the canonical briefs directory, internalize its context, and delete it after processing.
+description: Use when starting a new session to load the most recent brief file from the canonical briefs directory, intern
 ---
 # Load Brief Skill
 

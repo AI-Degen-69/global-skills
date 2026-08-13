@@ -1,6 +1,6 @@
 ---
 name: overnight-autonomous-improvement
-description: Run long-running overnight autonomous improvement loops for codebases - background terminal process that iterates collect data then build then test then lint then commit with morning delivery via notify_on_complete
+description: Use when running overnight autonomous build-test-commit loops.
 category: devops
 tags: [background, overnight, autonomous, loop, notify_on_complete, hermes]
 ---

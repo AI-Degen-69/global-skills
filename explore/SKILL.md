@@ -1,6 +1,6 @@
 ---
 name: explore
-description: Use this skill when the user asks you something that requires searching a code base
+description: Use when the user asks something that needs exploration before action.
 metadata:
   author: morph
   version: "0.1.0"

@@ -1,6 +1,6 @@
 ---
 name: windows-silent-cron
-description: Eliminate visible CMD/console windows from Hermes cron jobs on Windows. Use when a Hermes cron job (no_agent script, or any .py/.sh cron) flashes a console window, or when hardening new cron scripts so they never flash. Covers the two-layer fix (usercustomize in the VENV site-packages + run_hidden.py for bash git) and why the user site-packages path is a trap.
+description: Use when a Hermes cron job (no_agent script, or any .py/.sh cron) flashes a console window, or when hardening 
 ---
 
 # Windows Silent Cron — no console flash from Hermes cron jobs

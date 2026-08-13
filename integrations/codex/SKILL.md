@@ -1,6 +1,6 @@
 ---
 name: codex
-description: "Delegate coding to OpenAI Codex CLI (features, PRs)."
+description: Use when delegating coding to OpenAI Codex CLI (features, PRs).
 version: 1.0.0
 author: Hermes Agent
 license: MIT

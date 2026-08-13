@@ -1,6 +1,6 @@
 ---
 name: improve
-description: "Use when you want to audit a codebase, write self-contained implementation plans, and delegate execution to a cheaper model. Mirrors shadcn/improve's audit-to-plan-to-execute shape: the capable (main) model does recon/audit/prioritization/planning; delegate_task executes the plan in an isolated worktree on a pinned cheaper model. The plan is the product; the skill never implements directly."
+description: Use when you want to audit a codebase, write self-contained implementation plans, and delegate execution to a 
 version: 1.0.0
 author: Hermes Agent
 license: MIT

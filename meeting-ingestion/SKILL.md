@@ -1,10 +1,7 @@
 ---
 name: meeting-ingestion
 version: 1.0.0
-description: |
-  Ingest meeting transcripts into brain pages with attendee enrichment, entity
-  propagation, and timeline merge. A meeting is NOT fully ingested until the
-  enrich skill has processed every entity.
+description: Use when ingesting a meeting transcript into a brain page with attendees and decisions.
 triggers:
   - "meeting transcript"
   - "process this meeting"

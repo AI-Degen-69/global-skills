@@ -1,6 +1,6 @@
 ---
 name: data-source-indicator
-description: Show data provenance in UI with colored dot, mode label, and timestamp. Use when you need to surface whether displayed data came from a live API or a fallback/local source.
+description: Use when you need to surface whether displayed data came from a live API or a fallback/local source
 ---
 
 ## Pattern

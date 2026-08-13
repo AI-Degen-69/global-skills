@@ -1,6 +1,6 @@
 ---
 name: completion-contract-loop
-description: "Use when a task has vague done criteria, multiple requirements, high risk of premature completion claims, or needs bounded autonomous continuation with explicit proof and stop rules."
+description: Use when a task has vague done criteria, multiple requirements, high risk of premature completion claims, or n
 version: 1.0.0
 author: Hermes Agent
 license: MIT

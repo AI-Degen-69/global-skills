@@ -1,6 +1,6 @@
 ---
 name: swiftui-patterns
-description: SwiftUI architecture patterns, state management with @Observable, view composition, navigation, performance optimization, and modern iOS/macOS UI best practices.
+description: Use when building SwiftUI interfaces with declarative patterns on Apple platforms.
 ---
 
 # SwiftUI Patterns

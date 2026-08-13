@@ -1,6 +1,6 @@
 ---
 name: executing-plans-pitfalls
-description: PowerShell plan execution pitfalls and patterns for vault maintenance cron jobs
+description: Use when studying PowerShell plan-execution pitfalls and patterns.
 category: software-development
 tags: [powershell, cron, vault, pitfalls, patterns]
 ---

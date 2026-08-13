@@ -2,7 +2,7 @@
 name: cso
 preamble-tier: 2
 version: 2.0.0
-description: Chief Security Officer mode. (gstack)
+description: Use when acting as Chief Security Officer reviewing infrastructure.
 allowed-tools:
   - Bash
   - Read

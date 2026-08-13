@@ -1,6 +1,6 @@
 ---
 name: himalaya
-description: "Himalaya CLI: IMAP/SMTP email from terminal."
+description: Use when sending IMAP/SMTP email from the terminal via Himalaya.
 version: 1.1.0
 author: community
 license: MIT

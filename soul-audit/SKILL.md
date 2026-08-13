@@ -1,10 +1,7 @@
 ---
 name: soul-audit
 version: 1.0.0
-description: |
-  6-phase interactive interview that generates the agent's identity (SOUL.md),
-  user profile (USER.md), access control (ACCESS_POLICY.md), and operational
-  cadence (HEARTBEAT.md). Re-runnable anytime to update any section.
+description: Use when generating or updating the agent's SOUL/USER/ACCESS identity files.
 triggers:
   - "soul audit"
   - "customize agent"

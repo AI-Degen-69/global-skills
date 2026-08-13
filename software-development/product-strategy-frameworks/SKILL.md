@@ -1,6 +1,6 @@
 ---
 name: product-strategy-frameworks
-description: "Business & product strategy frameworks from bestselling books packaged as agent skills. Covers JTBD, Blue Ocean, Crossing the Chasm, Lean Startup, StoryBrand, Predictable Revenue, and 15+ more. Source: Wondel.ai Skills (MIT licensed)."
+description: Use when applying a business/product strategy framework (JTBD, Blue Ocean, etc.).
 version: 1.0.0
 category: software-development
 ---

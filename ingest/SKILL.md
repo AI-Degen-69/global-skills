@@ -1,6 +1,6 @@
 ---
 name: ingest
-description: Route content to specialized ingestion skills. Detects input type and delegates.
+description: Use when routing content to specialized ingestion skills.
 triggers:
   - "ingest this"
   - "save this to brain"

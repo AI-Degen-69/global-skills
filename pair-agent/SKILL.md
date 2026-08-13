@@ -1,7 +1,7 @@
 ---
 name: pair-agent
 version: 0.1.0
-description: Pair a remote AI agent with your browser. (gstack)
+description: Use when pairing a remote AI agent with your browser.
 triggers:
   - pair with agent
   - connect remote agent

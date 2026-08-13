@@ -1,6 +1,6 @@
 ---
 name: frontend-quality-pass
-description: Take a frontend repo from broken quality gates to a clean, stageable release handoff by fixing compiler/test/lint/repo-hygiene failures in the right order and verifying every gate end-to-end.
+description: Use when a frontend/web repository looks functional on the surface but fails basic shipping gates, or when the
 ---
 
 # Frontend Quality Pass

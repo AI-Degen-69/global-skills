@@ -2,7 +2,7 @@
 name: design-consultation
 preamble-tier: 3
 version: 1.0.0
-description: "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)"
+description: Use when starting a project and needing a DESIGN.md design-source document created.
 allowed-tools:
   - Bash
   - Read

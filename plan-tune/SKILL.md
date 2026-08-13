@@ -2,7 +2,7 @@
 name: plan-tune
 preamble-tier: 2
 version: 1.0.0
-description: "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)"
+description: Use when tuning AskUserQuestion sensitivity to developer psychographics.
 triggers:
   - tune questions
   - stop asking me that

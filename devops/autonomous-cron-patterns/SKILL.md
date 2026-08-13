@@ -1,6 +1,6 @@
 ---
 name: autonomous-cron-patterns
-description: Patterns for converting report-only cron jobs to autonomous fixers, fixing working directory issues, and troubleshooting cron execution
+description: Use when converting report-only cron jobs into autonomous maintenance loops.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

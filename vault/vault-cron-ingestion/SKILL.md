@@ -1,6 +1,6 @@
 ---
 name: vault-cron-ingestion
-description: "Use when designing or running autonomous vault ingestion jobs. Cron must reuse canonical ingestion and audit-fix, stay inside bounded inputs, and report ambiguous or approval-gated items instead of improvising."
+description: Use when designing or running autonomous vault ingestion jobs. Cron must reuse canonical ingestion and audit-f
 version: 1.0.0
 author: Hermes Agent
 license: MIT

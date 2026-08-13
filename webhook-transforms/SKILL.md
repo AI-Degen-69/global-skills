@@ -1,10 +1,7 @@
 ---
 name: webhook-transforms
 version: 1.0.0
-description: |
-  Generic framework for converting external events (SMS, meetings, social mentions)
-  into brain-ingestible signals. Define a transform function, register a webhook URL,
-  and incoming events get processed through the brain pipeline.
+description: Use when converting external events (SMS, social) into brain signals.
 triggers:
   - "set up webhook"
   - "process webhook event"

@@ -1,6 +1,6 @@
 ---
 name: workspace-path-discipline
-description: Keep terminal cwd, file-tool paths, and edit targets aligned when working across repo subdirectories.
+description: Use when the user any coding session that mixes terminal commands with file tools (read_file, search_files, pa
 ---
 
 # Workspace Path Discipline

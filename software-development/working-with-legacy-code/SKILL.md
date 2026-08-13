@@ -1,6 +1,6 @@
 ---
 name: working-with-legacy-code
-description: "Use when safely changing untested/legacy code — Michael Feathers' Working Effectively with Legacy Code: seams, characterization tests, sprout/wrap, dependency breaking, and refactoring under test."
+description: "Use when safely changing untested/legacy code — Michael Feathers' Working Effectively with Legacy Code: seams"
 version: 1.0.0
 author: Hermes Agent
 license: MIT

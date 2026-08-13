@@ -1,10 +1,7 @@
 ---
 name: signal-detector
 version: 1.0.0
-description: |
-  Always-on ambient signal capture. Fires on every inbound message to detect
-  original thinking and entity mentions. Spawn as a cheap sub-agent in parallel,
-  never block the main response.
+description: Use when lightweight sub-agent that fires on every inbound message to capture TWO things with EQUAL priority
 triggers:
   - every inbound message (always-on)
 tools:

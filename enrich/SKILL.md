@@ -1,10 +1,7 @@
 ---
 name: enrich
 version: 1.0.0
-description: |
-  Enrich brain pages with tiered enrichment protocol. Creates and updates
-  person/company pages with compiled truth, timeline, and cross-links.
-  Use when a new entity is mentioned or an existing page needs updating.
+description: Use when a new entity is mentioned or an existing page needs updating
 triggers:
   - "enrich"
   - "create person page"

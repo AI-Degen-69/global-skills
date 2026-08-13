@@ -1,6 +1,6 @@
 ---
 name: discord-cron-routing
-description: Organize Hermes cronjob Discord deliveries — create channels under a category, repoint cron `deliver` targets, and pin routing legends. Use when discord_admin lacks create_channel/send_message (it does), or when asked to "group cron deliveries", "create channels per cron category", "pin the cron routing map", or "move cron jobs into a Discord category". Covers the bot-token REST pattern Hermes needs because its discord_admin toolset only lists/reads + pins, cannot create channels or send messages.
+description: Use when restructuring which Discord channels Hermes cron jobs deliver to.
 ---
 
 # Discord Cron Routing

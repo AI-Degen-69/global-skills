@@ -1,6 +1,6 @@
 ---
 name: windows-terminal-popup-fix
-description: Fix the recurring Windows terminal-window flash ("conhost pops up") when Hermes/any Python agent spawns shell or process children on Windows, incl. the agent terminal tool. Root cause + canonical STARTUPINFO fix + watchdog pattern.
+description: Use when fixing the Windows conhost terminal-popup flash on process spawn.
 version: 1.0.0
 author: Hermes
 tags:

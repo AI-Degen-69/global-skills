@@ -1,6 +1,6 @@
 ---
 name: hermes-workflows-setup
-description: Configure Hermes Workflows plugin so that the dashboard's Workflows page loads and displays workflows.
+description: Use when configuring Hermes Workflows for the dashboard pipeline.
 category: hermes
 ---
 

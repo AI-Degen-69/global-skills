@@ -1,6 +1,6 @@
 ---
 name: yuanbao
-description: "Yuanbao (元宝) groups: @mention users, query info/members."
+description: Use when working with Yuanbao (元宝) groups or queries.
 version: 1.0.0
 platforms: [linux, macos, windows]
 metadata:

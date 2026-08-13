@@ -1,6 +1,6 @@
 ---
 name: hermes-clean-reinstall
-description: Use when Hermes on Linux/WSL should be reinstalled from a genuinely clean state without losing the old home or accidentally reusing its config, sessions, cron jobs, auth, or gateway state.
+description: Use when reinstalling Hermes cleanly on Linux/WSL without losing live state.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

@@ -1,11 +1,7 @@
 ---
 name: gbrain-advisor
 version: 1.0.0
-description: |
-  Proactive "make the most of gbrain" coaching. Runs `gbrain advisor` on a
-  cadence and pings the user with the top high-leverage actions for their brain:
-  version drift, pending migrations, stalled jobs, low embed coverage, setup
-  smells, and uninstalled brain skills. Read-only; always asks before fixing.
+description: Use when the user wants coaching on running gbrain better (the proactive advisor voice).
 triggers:
   - "what should I do to get more out of gbrain"
   - "is my brain set up right"

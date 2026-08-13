@@ -1,6 +1,6 @@
 ---
 name: todoist-cli-operations
-description: Operate Todoist through the local CLI with safe auth handling, sync discipline, and live verification. Use when the user wants task reads/writes, Todoist setup, or Todoist as the system of record.
+description: Use when the user wants task reads/writes, Todoist setup, or Todoist as the system of record
 ---
 
 # Todoist CLI operations

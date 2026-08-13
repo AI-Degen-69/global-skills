@@ -1,6 +1,6 @@
 ---
 name: cron-delivery-pin-convention
-description: Convention + procedure for wiring NEW Hermes cron jobs to the Discord `#📥 Cronjobs Deliveries` category. Each job must deliver to a dedicated channel under that category (create one if no suitable channel exists) AND a formatted job→schedule legend must be pinned in that channel. Use when creating a cron job, repointing a cron `deliver` target, or adding a job to an existing delivery channel.
+description: Use when creating a cron job, repointing a cron deliver target, or adding a job to an existing delivery channe
 ---
 
 # Cron Delivery & Pinned-Legend Convention

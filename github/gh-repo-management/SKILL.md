@@ -1,6 +1,6 @@
 ---
 name: gh-repo-management
-description: "Clone/create/fork repos; manage remotes, releases."
+description: Use when create, clone, fork, configure, and manage GitHub repositories. Each section shows gh first, then the
 version: 1.1.0
 author: Hermes Agent
 license: MIT

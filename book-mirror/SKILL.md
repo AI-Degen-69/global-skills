@@ -1,7 +1,7 @@
 ---
 name: book-mirror
 version: 0.1.0
-description: Take any book (EPUB/PDF), produce a personalized chapter-by-chapter analysis with two-column tables. Left column preserves the chapter content; right column maps every idea to the reader's actual life using brain context. Output is a single brain page at media/books/<slug>-personalized.md plus an optional PDF via brain-pdf.
+description: Use when turning a book (EPUB/PDF) into a personalized chapter-by-chapter analysis.
 triggers:
   - "personalized version of this book"
   - "mirror this book"

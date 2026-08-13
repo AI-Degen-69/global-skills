@@ -2,7 +2,7 @@
 name: sync-gbrain
 preamble-tier: 2
 version: 1.0.0
-description: Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)
+description: Use when keeping gbrain's index in sync with this repo's code and refresh ages.
 triggers:
   - sync gbrain
   - refresh gbrain

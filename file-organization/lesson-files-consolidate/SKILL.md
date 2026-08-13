@@ -1,6 +1,6 @@
 ---
 name: lesson-files-consolidate
-description: Consolidate a flat (or semi-flat) folder of course/lesson files — exercises, lecture materials (often prefixed "V "), and exam+solution pairs — into templated per-chapter folders plus a dedicated exams folder. Supports English OR Hebrew naming, ignores specified subfolders (e.g. "old"), md5-verifies before deleting duplicates, and retries on Windows file locks. Built for Accounting B (חשבונאות ב) but the mapping table is easy to adapt. Use when the user has a messy folder of mixed course materials to organize by chapter, or asks to "consolidate/organize lesson files", "file accounting materials by chapter", or replicate a consolidation in another folder/language.
+description: Use when organizing a messy folder of course files into per-chapter folders.
 ---
 
 # lesson-files-consolidate

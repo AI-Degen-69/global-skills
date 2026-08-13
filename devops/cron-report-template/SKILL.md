@@ -1,6 +1,6 @@
 ---
 name: cron-report-template
-description: Use when authoring or auditing a Hermes cron job's Discord run-report output. Enforces ONE uniform header hierarchy across the whole fleet so every job renders identically in Discord. Covers the "Discord does not render #/## markdown" gotcha, the canonical title/section shape, the shared vault_report.py renderer API, and how to fix off-format jobs (no_agent scripts + agent-prompt jobs).
+description: Use when authoring or auditing a Hermes cron job's Discord run-report output. Enforces ONE uniform header hier
 ---
 
 # Cron Run-Report Template (fleet-wide uniform)

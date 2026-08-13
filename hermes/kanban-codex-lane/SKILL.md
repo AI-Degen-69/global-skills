@@ -1,6 +1,6 @@
 ---
 name: kanban-codex-lane
-description: Use when a Hermes Kanban worker wants to run Codex CLI as an isolated implementation lane while Hermes keeps ownership of task lifecycle, reconciliation, testing, and handoff.
+description: Use when a Hermes Kanban worker wants to run Codex CLI as an isolated implementation lane while Hermes keeps o
 version: 1.0.0
 author: Hermes Agent
 license: MIT

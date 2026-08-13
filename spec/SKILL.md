@@ -1,7 +1,7 @@
 ---
 name: spec
 version: 0.1.0
-description: Turn vague intent into a precise, executable spec in five phases. (gstack)
+description: Use when turning vague intent into a precise, executable five-phase spec.
 allowed-tools:
   - Bash
   - Read

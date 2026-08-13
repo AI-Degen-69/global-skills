@@ -1,6 +1,6 @@
 ---
 name: vault-retrieval
-description: "Use when Robert asks about existing vault knowledge. Retrieve answers from the current vault cheaply before reading expensive sources, and do not ingest or save new outputs unless explicitly warranted."
+description: Use when Robert asks about existing vault knowledge. Retrieve answers from the current vault cheaply before re
 version: 1.0.0
 author: Hermes Agent
 license: MIT

@@ -1,6 +1,6 @@
 ---
 name: webhook-subscriptions
-description: "Webhook subscriptions: event-driven agent runs."
+description: Use when wiring event-driven agent runs via webhooks.
 version: 1.1.0
 platforms: [linux, macos, windows]
 metadata:

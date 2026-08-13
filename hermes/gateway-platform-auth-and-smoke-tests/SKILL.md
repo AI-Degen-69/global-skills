@@ -1,6 +1,6 @@
 ---
 name: gateway-platform-auth-and-smoke-tests
-description: Triage and verify Hermes chat-platform setups, especially Discord/Telegram auth, home-channel routing, and smoke-test delivery paths.
+description: Use when the user configured a chat platform and wants to test/smoke it.
 ---
 
 # Gateway Platform Auth and Smoke Tests

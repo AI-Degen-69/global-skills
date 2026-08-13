@@ -2,7 +2,7 @@
 name: design-html
 preamble-tier: 2
 version: 1.0.0
-description: "Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)"
+description: Use when finalizing designs into production-quality Pretext HTML.
 triggers:
   - build the design
   - code the mockup

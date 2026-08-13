@@ -1,9 +1,7 @@
 ---
 name: cron-scheduler
 version: 1.0.0
-description: |
-  Schedule management with staggering, quiet hours, and wake-up override.
-  Validates schedules, prevents collisions, and gates delivery during quiet hours.
+description: Use when the user wants to schedule, stagger, or set quiet-hours on a recurring cron job.
 triggers:
   - "schedule a job"
   - "cron"

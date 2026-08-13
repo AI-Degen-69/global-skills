@@ -1,6 +1,6 @@
 ---
 name: autoresearch-loop
-description: Run autoresearch autonomous LLM training experiments.
+description: Use when running autoresearch autonomous LLM training experiments.
 version: 0.1.0
 author: Hermes
 platforms: [windows]

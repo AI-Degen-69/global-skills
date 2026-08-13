@@ -1,6 +1,6 @@
 ---
 name: source-driven-development
-description: "Use when implementing any framework, library, or API feature. Ground every decision in official documentation: detect exact version from lockfile → fetch official docs → implement → cite URL in code comment. Banned primary sources: Stack Overflow, blog posts, model training data. Confidence is not evidence."
+description: "Use when implementing any framework, library, or API feature. Ground every decision in official documentation:"
 version: 1.0.0
 author: Hermes Agent
 license: MIT

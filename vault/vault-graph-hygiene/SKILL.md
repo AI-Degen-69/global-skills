@@ -1,6 +1,6 @@
 ---
 name: vault-graph-hygiene
-description: "Use when improving wikilinks, duplicate handling, orphan reduction, and graph-quality issues in Robert's vault. Make semantic link fixes, keep destructive graph changes approval-gated, and rerun audit-fix afterward."
+description: Use when improving wikilinks, duplicate handling, orphan reduction, and graph-quality issues in Robert's vault
 version: 1.0.0
 author: Hermes Agent
 license: MIT

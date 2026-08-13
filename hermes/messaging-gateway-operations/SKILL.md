@@ -1,6 +1,6 @@
 ---
 name: messaging-gateway-operations
-description: Operate Hermes messaging gateways across Telegram and other chat platforms.
+description: Use when operating Hermes messaging gateways across platforms.
 version: 1.0.1
 author: Hermes Agent
 license: MIT

@@ -1,6 +1,6 @@
 ---
 name: evaluating-llms-harness
-description: "lm-eval-harness: benchmark LLMs (MMLU, GSM8K, etc.)."
+description: Use when evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use wh
 version: 1.0.0
 author: Orchestra Research
 license: MIT

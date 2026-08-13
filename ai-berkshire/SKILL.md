@@ -1,7 +1,7 @@
 ---
 name: ai-berkshire
 version: "1.0.0"
-description: "Use when researching equities, auditing a portfolio, tracking investment theses, screening for quality, or running a portfolio-manager review. Invokes the xbtlin/ai-berkshire value-investing methodology (Buffett / Munger / Duan Yongping / Li Lu) plus its vendored financial-rigor Python tools."
+description: Use when researching equities, auditing a portfolio, tracking investment theses, screening for quality, or run
 argument-hint: "ai-berkshire portfolio-review <holdings> | ai-berkshire quality-screen AAPL,MSFT | ai-berkshire thesis-tracker <name> | ai-berkshire news-pulse <ticker>"
 allowed-tools: Read, Write, Bash, WebSearch, AskUserQuestion
 metadata:

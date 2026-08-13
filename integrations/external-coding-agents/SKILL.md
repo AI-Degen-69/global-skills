@@ -1,6 +1,6 @@
 ---
 name: external-coding-agents
-description: "External coding-agent CLIs umbrella: Claude Code, Codex, and OpenCode orchestration patterns."
+description: Use when coordinating external coding-agent CLIs (Claude Code, Codex, OpenCode).
 version: 1.0.0
 author: Hermes Agent
 license: MIT

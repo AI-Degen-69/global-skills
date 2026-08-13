@@ -1,6 +1,6 @@
 ---
 name: hermes-multi-profile-skills
-description: Manage and synchronize skills across multiple Hermes profiles using a canonical global skill directory symlinked to Global-Skills
+description: Use when managing or syncing skills across multiple Hermes profiles.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

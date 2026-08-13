@@ -1,6 +1,6 @@
 ---
 name: exact-output-compliance
-description: Follow literal output instructions exactly for probes, smoke tests, format-constrained replies, and model/provider identity checks.
+description: Use when the user specifies an exact reply/output shape you must comply with.
 ---
 
 # Exact Output Compliance

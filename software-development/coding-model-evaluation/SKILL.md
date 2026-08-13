@@ -1,6 +1,6 @@
 ---
 name: coding-model-evaluation
-description: Empirical benchmarking methodology for evaluating and ranking coding-capable LLMs. Covers task design (simple/medium/hard), execution patterns, result verification, and ranking frameworks. Use when comparing models for coding agent selection, validating provider claims, or building model routing logic.
+description: Use when comparing models for coding agent selection, validating provider claims, or building model routing lo
 category: software-development
 tags: [benchmarking, evaluation, coding-agents, model-selection, empirical-testing]
 ---

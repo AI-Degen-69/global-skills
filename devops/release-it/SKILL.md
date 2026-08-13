@@ -1,6 +1,6 @@
 ---
 name: release-it
-description: Use when designing, hardening, or reviewing production systems for stability, resilience, and operational readiness — Michael Nygard's Release It! patterns.
+description: Use when designing, hardening, or reviewing production systems for stability, resilience, and operational read
 version: 1.0.0
 author: Hermes Agent
 license: MIT

@@ -1,6 +1,6 @@
 ---
 name: design-system-audit-and-remediation
-description: Audit and remediate design system violations in projects with DESIGN.md, ensuring token compliance, signature elements, and motion tokens.
+description: Use when a project defines a design system (DESIGN.md/tokens) and you must verify implementation.
 category: software-development
 ---
 

@@ -1,12 +1,7 @@
 ---
 name: testing
 version: 1.1.0
-description: |
-  Skill validation framework PLUS daily test-suite health and regression
-  intelligence. Validates skill conformance (frontmatter, manifest coverage,
-  resolver coverage). Runs the project test suite in tiered phases (unit /
-  evals / integration / system health), classifies failures, and produces
-  a regression-aware report.
+description: Use when validating skill conformance or running tiered project test-suite health.
 triggers:
   - "validate skills"
   - "test skills"

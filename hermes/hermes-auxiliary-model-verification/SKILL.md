@@ -1,6 +1,6 @@
 ---
 name: hermes-auxiliary-model-verification
-description: Verify Hermes auxiliary model slots and image/vision task routes end-to-end after configuration changes. Use when Robert sets or changes `auxiliary.*` models, image generation providers, or asks whether title/skills/vision/image tasks actually work.
+description: Use when verifying Hermes auxiliary model slots and image/vision task coverage.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

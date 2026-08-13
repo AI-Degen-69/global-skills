@@ -1,6 +1,6 @@
 ---
 name: multi-agent-system-pattern
-description: "Pattern for building coordinated agent systems with orchestrator and specialized workers using filesystem communication."
+description: Use when building a coordinated multi-agent system with orchestrator and workers.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

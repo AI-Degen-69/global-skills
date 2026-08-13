@@ -1,6 +1,6 @@
 ---
 name: gbrain-sync-git-retry-patch
-description: Fix the Windows/MSYS git spawnSync ETIMEDOUT flake in gbrain sync that wedges sources with a <head> sentinel. Re-apply after every `gbrain upgrade`. Use when doctor reports `sync_failures: N (UNKNOWN)` with `git HEAD verification failed: spawnSync git ETIMEDOUT`, or when sync logs `[git retry]`-class timeouts, or after upgrading gbrain and seeing sync wedged again.
+description: "Use when doctor reports sync_failures: N (UNKNOWN) with git HEAD verification failed: spawnSync git ETIMEDOUT"
 ---
 
 # gbrain sync — git spawnSync timeout retry patch

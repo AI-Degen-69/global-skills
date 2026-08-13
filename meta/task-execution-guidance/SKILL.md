@@ -1,6 +1,6 @@
 ---
 name: task-execution-guidance
-description: Brief structured guidance handoff for who owns, prompt, skill, plan, and next steps.
+description: Use when handing off structured execution guidance to a worker.
 ---
 
 # Task Execution Guidance

@@ -1,6 +1,6 @@
 ---
 name: gh-pr-workflow
-description: "GitHub PR lifecycle: branch, commit, open, CI, merge."
+description: Use when complete guide for managing the PR lifecycle. Each section shows the gh way first, then the git + cur
 version: 1.1.0
 author: Hermes Agent
 license: MIT

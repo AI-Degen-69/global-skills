@@ -1,6 +1,6 @@
 ---
 name: gh-auth
-description: "GitHub auth setup: HTTPS tokens, SSH keys, gh CLI login."
+description: Use when this skill sets up authentication so the agent can work with GitHub repositories, PRs, issues, and CI
 version: 1.1.0
 author: Hermes Agent
 license: MIT

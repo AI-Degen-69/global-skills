@@ -1,6 +1,6 @@
 ---
 name: design-system-governance
-description: Govern design system compliance across Spec → Verifier → Environment layers. Use when a project has DESIGN.md/tokens but unverified implementation. Runs audit, establishes verification gates, and guides P0/P1/P2 remediation before feature work.
+description: Use when a project has DESIGN.md/tokens but unverified implementation. Runs audit, establishes verification ga
 version: 1.0.0
 author: Hermes Agent
 license: MIT

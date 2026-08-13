@@ -1,6 +1,6 @@
 ---
 name: steve-jobs-design-review
-description: Use when evaluating a design, UI, or product experience through Steve Jobs' lens — ruthless simplicity, binary verdicts, and focus on the one thing that matters.
+description: Use when evaluating a design, UI, or product experience through Steve Jobs' lens — ruthless simplicity, binary
 version: 1.0.0
 author: Hermes Agent
 license: MIT

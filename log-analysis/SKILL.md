@@ -1,16 +1,6 @@
 ---
 name: log-analysis
-description: >
-  Route runtime-log requests into one evidence packet before diagnosing anything.
-  Use when the user shares app/server/container/browser/CI/JSON log output and
-  wants the first actionable blocker, repeated signature, likely blast radius,
-  or safest next read-only checks. Choose one packet: app-runtime,
-  container-runtime, browser-plus-api, ci-cascade, structured-json, or
-  security-signal. Triggers on: check the logs, which line matters, real error,
-  first blocker, noisy stack trace, retry storm, browser 401/500, pod logs,
-  worker crash, CI abort, webhook failure. Route engine-specific Unity/Unreal
-  logs to `game-build-log-triage`, observability design to
-  `monitoring-observability`, and remediation/debug hypotheses to `debugging`.
+description: Use when triaging app/server/CI logs to find the first actionable blocker.
 allowed-tools: Bash Read Grep Glob
 compatibility: >
   Best for repositories, incidents, or pasted excerpts where the main task is

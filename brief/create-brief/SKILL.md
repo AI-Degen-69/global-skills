@@ -1,6 +1,6 @@
 ---
 name: create-brief
-description: Create a session brief for any project.
+description: Use when - Ending a session (manual or context limit)
 version: 0.2.0
 author: Hermes
 platforms: [windows]

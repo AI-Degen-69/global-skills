@@ -2,7 +2,7 @@
 name: devex-review
 preamble-tier: 3
 version: 1.0.0
-description: Live developer experience audit. (gstack)
+description: Use when auditing developer experience of a running app.
 triggers:
   - live dx audit
   - test developer experience

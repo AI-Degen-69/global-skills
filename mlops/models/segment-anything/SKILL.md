@@ -1,6 +1,6 @@
 ---
 name: segment-anything-model
-description: "SAM: zero-shot image segmentation via points, boxes, masks."
+description: Use when comprehensive guide to using Meta AI's Segment Anything Model for zero-shot image segmentation
 version: 1.0.0
 author: Orchestra Research
 license: MIT

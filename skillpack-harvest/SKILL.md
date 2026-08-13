@@ -1,12 +1,7 @@
 ---
 name: skillpack-harvest
 version: 0.33.0
-description: |
-  Lift a proven skill from a host repo (e.g. your OpenClaw fork) back into
-  gbrain's bundle so other clients can scaffold it. Editorial workflow:
-  the CLI does the file copy + privacy lint; this skill drives the
-  judgment-heavy genericization (scrub real names, generalize triggers,
-  lift fork-specific conventions to references).
+description: Use when lifting a proven skill from a host repo back into gbrain's bundle.
 triggers:
   - "harvest this skill"
   - "harvest my skill"

@@ -1,6 +1,6 @@
 ---
 name: hermes-themes
-description: "Author a Hermes color theme that skins every surface."
+description: Use when authoring a Hermes color theme that skins every surface.
 version: 1.0.0
 platforms: [linux, macos, windows]
 metadata:

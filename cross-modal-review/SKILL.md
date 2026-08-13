@@ -1,12 +1,7 @@
 ---
 name: cross-modal-review
 version: 1.1.0
-description: |
-  Quality gate via second model. Spawn a different AI model to review work
-  before committing. Includes refusal routing: if one model refuses, switch
-  silently to the next. Extended in v0.25.1 with structured review-mode
-  gating (when to invoke vs not) and a Codex code-review handoff for the
-  diff-review case.
+description: Use when a finished artifact needs a second-model quality gate before it is delivered.
 triggers:
   - "second opinion"
   - "cross-modal review"

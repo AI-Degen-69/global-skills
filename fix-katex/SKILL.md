@@ -1,6 +1,6 @@
 ---
 name: fix-katex
-description: Use when KaTeX mathematical strings render incorrectly (e.g. tabs appearing instead of \text) or when you need to enforce clean single-slash formatting.
+description: "Use when KaTeX mathematical strings render incorrectly (e.g. tabs appearing instead of 	ext) or when you need"
 ---
 
 # Fix KaTeX Formatting

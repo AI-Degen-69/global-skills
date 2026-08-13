@@ -1,9 +1,6 @@
 ---
 name: skill-maintenance
-description: |
-  Audit, canonicalize, and maintain skills across Hermes profiles and shared-skills.
-  Covers multi-profile drift detection, directory/frontmatter name parity, platform filtering,
-  duplicate resolution, and audit script reliability.
+description: Use when auditing or canonicalizing skills across Hermes profiles.
 triggers:
   - "Audit skills or skill audit across profiles"
   - "Canonicalize or fix skill names/mismatches between shared and local"

@@ -1,6 +1,6 @@
 ---
 name: hermes-cron-watchdogs
-description: Build, repair, and verify Hermes cron jobs backed by local scripts, especially silent-on-healthy watchdogs and dependency monitors.
+description: Use when creating or repairing a Hermes cron job that runs a local script
 ---
 
 # Hermes Cron Watchdogs

@@ -2,7 +2,7 @@
 name: office-hours
 preamble-tier: 3
 version: 2.0.0
-description: YC Office Hours — two modes. (gstack)
+description: Use when brainstorming or running YC-style office hours.
 allowed-tools:
   - Bash
   - Read

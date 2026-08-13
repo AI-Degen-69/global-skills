@@ -1,10 +1,7 @@
 ---
 name: maintain
 version: 1.0.0
-description: |
-  Brain health checks: back-link enforcement, citation audit, filing validation,
-  stale info detection, orphan pages, and benchmarks. Use when asked to check
-  brain health, run maintenance, or audit quality.
+description: Use when running periodic brain health checks and cleanup.
 triggers:
   - "brain health"
   - "check backlinks"

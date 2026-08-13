@@ -1,6 +1,6 @@
 ---
 name: vault-external-workflow-evaluation
-description: "Use when evaluating external repos, prompt packs, workflows, or automation systems for Robert's vault. Inspect them outside the vault, borrow procedures not schemas, and explain adopt, adapt, reject, or monitor conclusions clearly."
+description: Use when evaluating external repos, prompt packs, workflows, or automation systems for Robert's vault. Inspect
 version: 1.0.0
 author: Hermes Agent
 license: MIT

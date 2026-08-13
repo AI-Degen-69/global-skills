@@ -2,7 +2,7 @@
 name: codex
 preamble-tier: 3
 version: 1.0.0
-description: OpenAI Codex CLI wrapper — three modes. (gstack)
+description: Use when delegating coding to OpenAI Codex CLI (features, PRs).
 triggers:
   - codex review
   - second opinion

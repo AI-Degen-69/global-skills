@@ -1,6 +1,6 @@
 ---
 name: hermes-plugin-compatibility-maintenance
-description: Maintain and troubleshoot local Hermes plugins that patch core tools, schemas, or runtime handlers, especially after Hermes core upgrades add new parameters or behaviors.
+description: Use when a Hermes plugin that patches a core tool breaks after a core update.
 ---
 
 # Hermes Plugin Compatibility Maintenance

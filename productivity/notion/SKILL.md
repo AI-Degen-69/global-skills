@@ -1,6 +1,6 @@
 ---
 name: notion
-description: "Notion API + ntn CLI: pages, databases, markdown, Workers."
+description: Use when using the Notion API or ntn CLI (pages, databases, MD).
 version: 2.0.0
 author: community
 license: MIT

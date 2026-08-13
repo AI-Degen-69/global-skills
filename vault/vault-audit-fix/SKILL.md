@@ -1,6 +1,6 @@
 ---
 name: vault-audit-fix
-description: "Use when auditing Robert's vault, after ingestion, or before/after graph cleanup. Run the full audit, fix safe deterministic findings, rerun the audit, and report approval-needed items. Includes scoped domain audit fixes for domains like Agent Skills."
+description: Use when auditing Robert's vault, after ingestion, or before/after graph cleanup. Run the full audit, fix safe
 version: 1.1.0
 author: Hermes Agent
 license: MIT

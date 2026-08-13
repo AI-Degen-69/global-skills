@@ -1,6 +1,6 @@
 ---
 name: gbrain-source-bootstrap
-description: Bootstrap and verify a Git-backed gbrain source when artifacts live in a separate repo, especially on Windows hosts using GitHub CLI HTTPS auth and PgBouncer/Supabase poolers.
+description: Use when creating or reusing a dedicated artifacts repo that gbrain should index.
 ---
 
 # gbrain-source-bootstrap

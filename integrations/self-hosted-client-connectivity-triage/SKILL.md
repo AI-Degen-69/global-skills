@@ -1,6 +1,6 @@
 ---
 name: self-hosted-client-connectivity-triage
-description: Diagnose connectivity failures when a native/mobile client is trying to reach a self-hosted web app or agent UI over LAN, Tailscale, or similar private networking.
+description: Use when a phone/native app cannot connect to a self-hosted service.
 ---
 
 # Self-Hosted Client Connectivity Triage

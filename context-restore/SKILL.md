@@ -2,7 +2,7 @@
 name: context-restore
 preamble-tier: 2
 version: 1.0.0
-description: Restore working context saved earlier by /context-save. (gstack)
+description: Use when restoring working context saved earlier by /context-save.
 allowed-tools:
   - Bash
   - Read

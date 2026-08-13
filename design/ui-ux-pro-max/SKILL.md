@@ -1,14 +1,6 @@
 ---
 name: ui-ux-pro-max
-description: >
-  AI-powered UI/UX design intelligence with searchable local databases: 84 UI
-  styles, 161 color palettes, 73 font pairings, 99 UX guidelines, 25 chart
-  types across 22 tech stacks (React, Next.js, Vue, Svelte, Astro, SwiftUI,
-  React Native, Flutter, Tailwind, shadcn/ui, Jetpack Compose, Angular,
-  Laravel, JavaFX, Three.js, etc.). Use when designing, building, reviewing,
-  or fixing any UI: pages, components, color schemes, typography, layout,
-  accessibility, animation, or data visualization. Generates a complete design
-  system from a project description via a stdlib-only BM25 search engine.
+description: Use when designing, building, reviewing
 version: "2.6.2"
 author: NextLevelBuilder
 license: MIT

@@ -1,10 +1,7 @@
 ---
 name: idea-ingest
 version: 1.0.0
-description: |
-  Ingest links, articles, tweets, and ideas into the brain. Fetch content, save
-  to brain with analysis, create author people page, and cross-link. Use when the
-  user shares a link or says "read this", "save this", "think about this".
+description: Use when ingesting links, articles, or ideas into brain pages with analysis.
 triggers:
   - shares a link or URL
   - "read this"

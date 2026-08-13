@@ -1,6 +1,6 @@
 ---
 name: fable-judge
-description: "Use when work is claimed complete, an agent/tool reports 'done', or before presenting substantive output as finished — runs an adversarial verification pass that re-runs every claimed check, diffs actual changes, and hunts weakened tests + false completion claims. Verdicts: VERIFIED / CAVEATS / REFUTED. Bundles the s7-fraudulent-work crime scene as a self-test fixture."
+description: Use when work is claimed complete, an agent/tool reports 'done', or before presenting substantive output as fi
 version: 1.2.0
 author: "Hermes Agent (ported from Sahir619/fable-method)"
 license: MIT

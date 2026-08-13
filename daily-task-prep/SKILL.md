@@ -1,9 +1,7 @@
 ---
 name: daily-task-prep
 version: 1.0.0
-description: |
-  Morning preparation. Calendar lookahead, meeting context loading, open threads
-  from yesterday, active task review. Extends briefing with actionable prep.
+description: "Use when preparing for the day: load calendar, surface open threads and active tasks."
 triggers:
   - "morning prep"
   - "prepare for today"

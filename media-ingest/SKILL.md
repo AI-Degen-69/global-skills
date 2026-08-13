@@ -1,10 +1,7 @@
 ---
 name: media-ingest
 version: 1.0.0
-description: |
-  Ingest video, audio, PDF, book, screenshot, and GitHub repo content into the brain.
-  Multi-format handling with entity extraction and backlink propagation. Covers
-  video-ingest, youtube-ingest, and book-ingest subtypes.
+description: Use when ingesting video, audio, PDF, book, or repo content into the brain.
 triggers:
   - "watch this video"
   - "process this YouTube link"

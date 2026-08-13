@@ -1,6 +1,6 @@
 ---
 name: verification-plan
-description: "Use before any multi-step task to define measurable success criteria, checkpoints, critic choice, and external signals."
+description: Use when starting a multi-step task and needing a measurable success-verification plan.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

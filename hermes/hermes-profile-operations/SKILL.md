@@ -1,7 +1,7 @@
 ---
 name: hermes-profile-operations
 category: devops
-description: Hermes profile lifecycle management — create, clone, sync, and maintain profiles with shared resources via symlinks
+description: Use when creating, cloning, syncing, or maintaining Hermes profiles.
 ---
 
 # Skill: hermes-profile-operations

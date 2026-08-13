@@ -1,6 +1,6 @@
 ---
 name: cross-harness-plugin-porting
-description: Evaluate whether an external agent workflow, skill pack, or plugin can be installed into Hermes directly, or must be ported. Use for Claude/Codex/Cursor/Gemini/Copilot ecosystems and similar cross-harness compatibility questions.
+description: Use when evaluating or porting an external agent plugin into Hermes.
 version: 1.0.0
 author: Hermes
 ---

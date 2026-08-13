@@ -1,6 +1,6 @@
 ---
 name: skill-library
-description: Maintain the agent skill library — when to update, what to capture, and how to organize skills at the class level
+description: Use when deciding whether/how to update, capture, or skip a skill-library entry.
 ---
 
 # Skill Library Maintenance

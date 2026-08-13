@@ -1,6 +1,6 @@
 ---
 name: safe-maintenance-crons
-description: Design autonomous maintenance cron jobs that improve a local system safely without creating cleanup debt or making high-risk changes.
+description: Use when building recurring self-maintenance/hygiene cron jobs that may mutate state.
 ---
 
 # Safe Maintenance Crons

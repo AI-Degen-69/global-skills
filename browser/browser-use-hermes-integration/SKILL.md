@@ -1,6 +1,6 @@
 ---
 name: browser-use-hermes-integration
-description: Configure Hermes to use Browser Use cloud browsers and install browser-harness with durable verification, especially on Windows.
+description: Use when the user wants Hermes itself to gain Browser Use capability.
 version: 1.0.0
 created_by: agent
 author: Hermes Agent

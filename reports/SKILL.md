@@ -1,9 +1,7 @@
 ---
 name: reports
 version: 1.0.0
-description: |
-  Save and load timestamped reports. Keyword routing for fast lookup. Cron jobs
-  save output as reports; the agent or user queries them by keyword.
+description: Use when saving, loading, or routing timestamped reports by category.
 triggers:
   - "save report"
   - "load latest report"

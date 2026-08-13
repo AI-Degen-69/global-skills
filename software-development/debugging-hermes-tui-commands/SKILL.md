@@ -1,6 +1,6 @@
 ---
 name: debugging-hermes-tui-commands
-description: "Debug Hermes TUI slash commands: Python, gateway, Ink UI."
+description: Use when debugging Hermes TUI slash commands (Python/gateway/Ink).
 version: 1.0.0
 author: Hermes Agent
 license: MIT

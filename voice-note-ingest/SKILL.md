@@ -1,7 +1,7 @@
 ---
 name: voice-note-ingest
 version: 0.1.0
-description: Ingest a voice note with exact-phrasing preservation (never paraphrased). Routes content to originals/, concepts/, people/, companies/, ideas/, personal/, or voice-notes/ based on a decision tree. The user's exact words are the signal.
+description: Use when ingesting a voice note and preserving exact phrasing for brain routing.
 triggers:
   - "voice note"
   - "ingest this voice memo"

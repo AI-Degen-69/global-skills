@@ -1,6 +1,6 @@
 ---
 name: vault-guardrails
-description: "Use when modifying vault guardrail policy, shell-hook enforcement, or deciding which vault actions are always allowed, approval-required, or blocked."
+description: Use when modifying vault guardrail policy, shell-hook enforcement, or deciding which vault actions are always 
 version: 1.0.0
 author: Hermes Agent
 license: MIT

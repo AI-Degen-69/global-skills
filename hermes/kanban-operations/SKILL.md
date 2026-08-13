@@ -1,6 +1,6 @@
 ---
 name: kanban-operations
-description: "Hermes Kanban umbrella: orchestration, worker behavior, handoffs, retries, and blocking discipline."
+description: Use when orchestrating or running Hermes Kanban worker lanes.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

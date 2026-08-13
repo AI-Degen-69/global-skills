@@ -1,6 +1,6 @@
 ---
 name: context-engineering-agent-skills
-description: "Use when agent output quality drops, starting a new session, switching tasks, or when sources conflict and the agent must not silently pick one. Five-level context hierarchy: rules → files → specs → relevant source → error output → conversation. Structured confusion block on conflicts."
+description: Use when agent output quality drops, starting a new session, switching tasks, or when sources conflict and the
 version: 1.0.0
 author: Hermes Agent
 license: MIT

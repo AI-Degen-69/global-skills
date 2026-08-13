@@ -1,6 +1,6 @@
 ---
 name: briefing
-description: Compile daily briefing with meeting context, active deals, and citation tracking
+description: Use when compiling a daily briefing with meeting and task context.
 triggers:
   - "daily briefing"
   - "morning briefing"

@@ -2,7 +2,7 @@
 name: setup-gbrain
 preamble-tier: 2
 version: 1.0.0
-description: "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)"
+description: Use when the user wants to install and configure gbrain for this repo.
 triggers:
   - setup gbrain
   - install gbrain

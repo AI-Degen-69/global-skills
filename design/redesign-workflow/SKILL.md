@@ -1,6 +1,6 @@
 ---
 name: redesign-workflow
-description: Turn UI critique or vague redesign intent into a directed workflow that ends in a visible prototype, not an open loop. Use when the user asks what should be improved visually, asks whether a plan/Kanban is needed, or wants a redesign example to review.
+description: Use when the user asks what should be improved visually, asks whether a plan/Kanban is needed, or wants a rede
 ---
 
 # Redesign Workflow

@@ -1,11 +1,7 @@
 ---
 name: data-research
 version: 1.0.0
-description: |
-  Structured data research: search sources, extract structured data,
-  archive raw sources, maintain canonical tracker pages, deduplicate.
-  Parameterized via YAML recipes for investor updates, donations,
-  company updates, or any email-to-structured-data pipeline.
+description: Use when tracking structured data from email, web, or API sources into research.
 triggers:
   - "research"
   - "track"

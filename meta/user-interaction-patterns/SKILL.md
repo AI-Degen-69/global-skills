@@ -1,6 +1,6 @@
 ---
 name: user-interaction-patterns
-description: Hub-behavioral patterns and user-preference signals for human interaction. Covers how the user directs, confirms, and provides feedback so the agent can match their style without re-learning in every session.
+description: Use when matching the user's direction style, confirmation, and feedback signals.
 ---
 
 ## Routing and context discipline

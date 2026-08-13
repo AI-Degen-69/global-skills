@@ -1,11 +1,6 @@
 ---
 name: determine-threat-model
-description: >
-  Build a threat model for the current repository or component. Use this skill
-  to identify entry points, trust boundaries, sensitive data paths, and priority
-  review areas. The resulting threat model artifact is used by other skills to
-  contextualize scanner findings and distinguish true positives from false
-  positives.
+description: Use when building a threat model for a repo or component to scope review.
 ---
 
 # Determine Threat Model

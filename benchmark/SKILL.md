@@ -2,7 +2,7 @@
 name: benchmark
 preamble-tier: 1
 version: 1.0.0
-description: Performance regression detection using the browse daemon. (gstack)
+description: Use when detecting performance regressions via the browse daemon baselines.
 triggers:
   - performance benchmark
   - check page speed

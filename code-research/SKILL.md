@@ -1,6 +1,6 @@
 ---
 name: code-research
-description: Research open-source repositories to understand how something is built or works.
+description: Use when researching open-source repos to understand a system.
 metadata:
   author: morph
   version: "0.1.0"

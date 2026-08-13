@@ -1,12 +1,7 @@
 ---
 name: minion-orchestrator
 version: 1.0.0
-description: |
-  Unified Minions skill for both deterministic shell jobs and LLM subagent
-  orchestration. Replaces the older `gbrain-jobs` routing intent. Use when:
-  submitting gbrain jobs, shell/background tasks, spawning subagents,
-  checking progress, steering running work, pausing/resuming, parallel
-  fan-out. One durable, observable, steerable queue interface.
+description: Use when running durable background shell or agent jobs via the Minions queue.
 triggers:
   - "gbrain jobs submit"
   - "submit a gbrain job"

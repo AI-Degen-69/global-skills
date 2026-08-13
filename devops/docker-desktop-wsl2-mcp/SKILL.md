@@ -1,6 +1,6 @@
 ---
 name: docker-desktop-wsl2-mcp
-description: Deploy Docker-composed services (especially MCP/HTTP servers) on Windows so Windows-native Python clients (Hermes, urllib, requests) can reach them reliably. Use when a service runs in WSL2 Docker but Python gets ConnectionReset/421, or when planning a new local Docker deploy on Windows.
+description: Use when a service runs in WSL2 Docker but Python gets ConnectionReset/421, or when planning a new local Docke
 ---
 
 # Docker Desktop beats WSL2-daemon for Windows-native Python clients

@@ -1,6 +1,6 @@
 ---
 name: morph-migrate
-description: Migrate this app's LLM calls onto a Morph open model (GLM-5.2), either fully or as a scored 5% production trial. Use when the user wants to move a provider/model to Morph, A/B a Morph model against their incumbent, or run a canary on real traffic.
+description: Use when the user wants to move a provider/model to Morph, A/B a Morph model against their incumbent, or run a
 metadata:
   author: morph
   version: "0.1.0"

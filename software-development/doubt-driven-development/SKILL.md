@@ -1,6 +1,6 @@
 ---
 name: doubt-driven-development
-description: "Use when stakes are high (production, security, irreversible), working in unfamiliar code, or a confident output is cheaper to verify now than to debug later. Adversarial fresh-context review: CLAIM → EXTRACT → DOUBT → RECONCILE → STOP."
+description: Use when stakes are high (production, security, irreversible), working in unfamiliar code, or a confident outp
 version: 1.0.0
 author: Hermes Agent
 license: MIT

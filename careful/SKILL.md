@@ -1,7 +1,7 @@
 ---
 name: careful
 version: 0.1.0
-description: Safety guardrails for destructive commands. (gstack)
+description: Use when guarding destructive commands with a safety warning layer.
 triggers:
   - be careful
   - warn before destructive

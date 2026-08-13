@@ -1,6 +1,6 @@
 ---
 name: hermes-bootstrap-validation
-description: "Bootstrap a fresh Hermes install on Linux/WSL, wire auth + memory/plugins, and verify the stack with real smoke tests instead of stopping at installer success."
+description: Use when validating a fresh Hermes install on Linux/WSL and wiring auth.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

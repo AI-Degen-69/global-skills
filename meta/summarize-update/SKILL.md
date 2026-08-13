@@ -1,6 +1,6 @@
 ---
 name: summarize-update
-description: Produce a plain-language before→after change summary comparing the CURRENT checkout (HEAD) against UPSTREAM (origin/main) — i.e. what an update would bring. Triggers when the user asks "what changed / what's new upstream / day-summary of updates / summarize before I update", or wants a non-technical diff of their version vs upstream. Output is a comparison TABLE with everyday examples — NO commit hashes, NO diff/line counts, NO techy jargon. Weighted so heavy/risky changes lead.
+description: Use when the user asks "what's new upstream / what would I get if I update / summarize before I update"
 ---
 
 # summarize-update

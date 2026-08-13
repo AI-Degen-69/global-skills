@@ -2,7 +2,7 @@
 name: qa
 preamble-tier: 4
 version: 2.0.0
-description: Systematically QA test a web application and fix bugs found. (gstack)
+description: Use when systematically QA-testing a web app and fixing the bugs found.
 allowed-tools:
   - Bash
   - Read

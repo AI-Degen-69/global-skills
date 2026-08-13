@@ -2,7 +2,7 @@
 name: ship
 preamble-tier: 4
 version: 1.0.0
-description: "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)"
+description: Use when running the ship workflow (merge, test, version, commit, PR).
 allowed-tools:
   - Bash
   - Read

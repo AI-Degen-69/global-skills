@@ -1,6 +1,6 @@
 ---
 name: requesting-code-review
-description: "Pre-commit review: security scan, quality gates, auto-fix."
+description: Use when running a pre-commit review (security scan, quality gates).
 version: 2.0.0
 author: Hermes Agent (adapted from obra/superpowers + MorAlekss)
 license: MIT

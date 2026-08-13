@@ -1,6 +1,6 @@
 ---
 name: vault-compounding-loop
-description: "Use when deciding whether generated synthesis belongs in the vault's outputs. Save only provenance-backed durable work; do not create vault files from ordinary chat assessments or unsupported answers."
+description: Use when deciding whether generated synthesis belongs in the vault's outputs. Save only provenance-backed dura
 version: 1.0.0
 author: Hermes Agent
 license: MIT

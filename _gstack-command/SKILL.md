@@ -2,7 +2,7 @@
 name: gstack
 preamble-tier: 1
 version: 1.2.0
-description: Router for the gstack skill suite. (gstack)
+description: Use when routing a request into the gstack command suite.
 allowed-tools:
   - Bash
   - Read

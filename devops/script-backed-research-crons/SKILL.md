@@ -1,6 +1,6 @@
 ---
 name: script-backed-research-crons
-description: Use when building recurring research/radar cron jobs that should collect evidence deterministically, persist artifacts, and deliver a concise human brief.
+description: Use when building recurring research/radar cron jobs that should collect evidence deterministically, persist a
 version: 1.0.0
 author: Hermes
 license: MIT

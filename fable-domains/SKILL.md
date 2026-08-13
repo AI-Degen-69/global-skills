@@ -1,6 +1,6 @@
 ---
 name: fable-domains
-description: "Domain adapters for non-coding deliverables. Use when the task is finance, legal/compliance, business-ops, data-analysis, or design/UX (or a mixed task whose primary deliverable is one of these). Changes the NOUNS of any verification loop (fable-judge, verification-before-completion, high-agency-critic-mode) — what counts as evidence, who the authority is, what 'verify by observation' means, and the domain-specific frauds a judge should hunt. Loop structure is unchanged."
+description: Use when the task is finance, legal/compliance, business-ops, data-analysis, or design/UX (or a mixed task who
 version: 1.0.0
 author: "Hermes Agent (ported from Sahir619/fable-method domain adapters)"
 license: MIT

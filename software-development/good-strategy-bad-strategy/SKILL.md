@@ -1,6 +1,6 @@
 ---
 name: good-strategy-bad-strategy
-description: Use when evaluating, crafting, or stress-testing strategy — Richard Rumelt's kernel (diagnosis, guiding policy, coherent action) and bad-strategy detection.
+description: Use when evaluating, crafting, or stress-testing strategy — Richard Rumelt's kernel (diagnosis, guiding policy
 version: 1.0.0
 author: Hermes Agent
 license: MIT

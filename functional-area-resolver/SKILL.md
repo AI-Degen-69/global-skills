@@ -2,12 +2,7 @@
 name: functional-area-resolver
 version: 1.0.0
 prompt_version: 1
-description: |
-  Compress an agent's routing file (RESOLVER.md or AGENTS.md) by converting
-  granular skill-per-row tables into functional-area dispatchers. Each area
-  lists sub-skills in a "(dispatcher for: ...)" clause. The LLM reads one
-  area entry and routes to the correct sub-skill. Proven via held-out
-  A/B eval: dispatcher pattern outperforms naive pipe-table compression.
+description: Use when compressing an agent routing file into functional-area dispatchers.
 triggers:
   - "compress agents.md"
   - "compress my resolver"

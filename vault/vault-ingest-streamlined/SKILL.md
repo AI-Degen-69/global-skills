@@ -1,6 +1,6 @@
 ---
 name: vault-ingest-streamlined
-description: "Faster canonical vault ingestion for _Inbox GitHub-repo / source captures. Preserves the FULL quality bar from vault-ingestion (raw preserve, durable wiki, links, index/log, audit, report) but uses mv + batched writes + pre-checked wikilink targets to cut tool round-trips. DEFAULT optimized execution layer for vault-ingestion. Load when ingesting one or more _Inbox items and you want the fast path."
+description: Use when ingesting _Inbox vault items via the fast mv+batched path.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

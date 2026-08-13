@@ -1,6 +1,6 @@
 ---
 name: scoped-shell-guardrails
-description: "Design shell-hook or pre-tool guardrails for scoped workflows where some writes are allowed in-domain but must block protected, global, or out-of-scope mutations."
+description: Use when a workflow needs scoped shell guardrails (not fully read-only or blocked).
 version: 1.0.0
 author: Hermes Agent
 license: MIT

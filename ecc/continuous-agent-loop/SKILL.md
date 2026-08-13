@@ -1,6 +1,6 @@
 ---
 name: continuous-agent-loop
-description: Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls.
+description: Use when this is the v1.8+ canonical loop skill name. It supersedes autonomous-loops while keeping compatibili
 metadata:
   origin: ECC
 ---

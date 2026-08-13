@@ -1,6 +1,6 @@
 ---
 name: hermes-plugins-setup
-description: Install and configure Hermes plugins for automation (Open Second Brain and Hermes Workflows)
+description: Use when installing and configuring Hermes plugins for automation.
 author: Hermes Agent
 version: 1
 ---

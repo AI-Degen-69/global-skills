@@ -1,16 +1,6 @@
 ---
 name: pattern-detection
-description: >
-  Route repeated pattern, rule, and anomaly work into one detection packet before
-  suggesting tools or fixes. Use when the user needs reusable scans, suspicious
-  repeated shapes, grouped outlier candidates, or first-pass anomaly triage across
-  code, logs/events, telemetry, and metric tables. Choose one packet:
-  text-prefilter, structural-code-rule, log-event-pattern, or metric-anomaly.
-  Triggers on: repeated bug, suspicious spike, odd cohort, noisy event, code
-  smell family, rule pack, anti-pattern, outlier, anomaly, fraud signal, or
-  recurring issue. Route root-cause incident work to log-analysis, KPI/business
-  explanation to data-analysis, repo tracing to codebase-search, remediation to
-  specialist skills, and alert/incident operations to monitoring-observability.
+description: Use when the user needs reusable scans, suspicious
 allowed-tools: Read Grep Glob Bash
 metadata:
   tags: patterns, anomalies, outliers, structural-search, telemetry, detection, routing

@@ -1,10 +1,7 @@
 ---
 name: brain-ops
 version: 1.0.0
-description: |
-  Brain knowledge base operations. The core read/write cycle: brain-first lookup,
-  read-enrich-write loop, source attribution, ambient enrichment, back-linking.
-  Read this before any brain interaction.
+description: Use when doing brain read/write ops (lookup, enrich, backlink).
 triggers:
   - any brain read/write/lookup/citation
 tools:

@@ -1,6 +1,6 @@
 ---
 name: discord-local-report-delivery
-description: How to deliver locally-generated HTML/file reports to Discord for a Windows user — use a copy-paste code-block path, NOT a localhost server or a file attachment.
+description: Use when a local cron report must be surfaced into a Discord message on Windows.
 ---
 
 # Discord Local Report Delivery (Windows, local files)

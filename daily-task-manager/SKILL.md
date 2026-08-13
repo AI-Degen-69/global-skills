@@ -1,9 +1,7 @@
 ---
 name: daily-task-manager
 version: 1.0.0
-description: |
-  Task lifecycle management. Add, complete, defer, remove, and review tasks.
-  Maintains a running task list as a brain page.
+description: Use when managing tasks (add, complete, defer) tracked on the brain ops/tasks page.
 triggers:
   - "add task"
   - "complete task"

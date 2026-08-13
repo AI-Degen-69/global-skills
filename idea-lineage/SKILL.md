@@ -1,11 +1,7 @@
 ---
 name: idea-lineage
 version: 0.1.0
-description: |
-  Trace one idea's evolution through the brain: first mention, best
-  articulation, related concepts, reversals, contradictions, abandoned
-  branches, and the current live version. Use for single-idea conceptual
-  lineage, not broad concept-map synthesis or structured entity metrics.
+description: Use when tracing one idea's evolution across brain pages over time.
 triggers:
   - "idea lineage"
   - "trace the lineage of this idea"

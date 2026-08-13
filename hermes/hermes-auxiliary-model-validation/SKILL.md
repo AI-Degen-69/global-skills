@@ -1,6 +1,6 @@
 ---
 name: hermes-auxiliary-model-validation
-description: Validate and repair Hermes auxiliary model routes for title generation, skills hub, vision/image analysis, and image generation backends using live task-path smoke tests.
+description: Use when validating Hermes auxiliary model routes for title/skills/vision tasks.
 version: 1.0.0
 platforms: [windows, linux, macos]
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: gh-workflow
-description: GitHub workflow skill.
+description: Use when placeholder for GitHub workflow skill
 version: 1.0.0
 author: Hermes Agent
 license: MIT

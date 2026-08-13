@@ -1,6 +1,6 @@
 ---
 name: gh-code-review
-description: "Review PRs: diffs, inline comments via gh or REST."
+description: Use when perform code reviews on local changes before pushing, or review open PRs on GitHub. Most of this skil
 version: 1.1.0
 author: Hermes Agent
 license: MIT

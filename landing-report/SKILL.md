@@ -1,7 +1,7 @@
 ---
 name: landing-report
 version: 0.1.0
-description: Read-only queue dashboard for workspace-aware ship. (gstack)
+description: Use when viewing the read-only queue dashboard for workspace-aware ship.
 triggers:
   - landing report
   - version queue

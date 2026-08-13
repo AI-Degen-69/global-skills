@@ -1,6 +1,6 @@
 ---
 name: autonomous-agent-workflow-implementation
-description: Upgrade or build autonomous multi-agent workflow systems from rough idea to verified staged controller, including dependency gates, artifact durability, and simulation alignment.
+description: Use when delegating rough ideas to an orchestrator that spawns specialist agents.
 ---
 
 # Autonomous Agent Workflow Implementation

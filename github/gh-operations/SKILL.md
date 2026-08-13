@@ -1,6 +1,6 @@
 ---
 name: gh-operations
-description: "GitHub operations umbrella: auth, repo setup, issues, PR workflow, and code review."
+description: Use when running the GitHub operations umbrella (auth, repo, issues, PR).
 version: 1.0.0
 author: Hermes Agent
 license: MIT

@@ -1,15 +1,6 @@
 ---
 name: install-suggested-followups
-description: |
-  Self-installer that teaches an agent (Hermes, Codex/Codebuff CLI, Claude
-  Code, etc.) to audit its OWN system files and permanently embed the
-  suggested-followups behavior at the core of its system — so it persists
-  across sessions, models, prompt rebuilds, and reloads. The installed spec
-  forces plain markdown **Bold prefix:** followups instead of clickable host
-  cards, and uses a literal `Task complete.` line + `**Main objective was
-  done.**` first-card rule to break the suggestion loop. Mirrors the
-  `~/.knowledge.md` fix-patch that ends the suggestions-loop, generalized
-  cross-runtime.
+description: Use when teaching an agent to embed the suggested-followups behavior permanently.
 version: 1.0.1
 author: Codebuff (Codex CLI)
 license: MIT

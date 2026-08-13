@@ -1,6 +1,6 @@
 ---
 name: post-task-summary-protocol
-description: Structured task closeout contract — uses an ordered delta log with flexible bracketed action tags, plain-language descriptions, expected results, and manual verification steps, then ends with up to 3 concrete follow-ups.
+description: Use when closing a task with a structured delta-log summary.
 argument-hint: "Use after every completed task, session, or milestone."
 ---
 

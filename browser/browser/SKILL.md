@@ -1,6 +1,6 @@
 ---
 name: browser
-description: Thin router skill for browser work in Hermes.
+description: Use when routing a browser task to the right browser skill.
 ---
 
 # browser

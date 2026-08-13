@@ -1,6 +1,6 @@
 ---
 name: vault-inbox-selection-and-ordering
-description: Resolve Robert's references to "first/next/latest" files for Vault ingestion by anchoring selection to _Inbox only and to the user's visible ordering, not arbitrary search results.
+description: Use when the user refers to inbox files by position (first/next/latest) to ingest.
 ---
 
 # Vault Inbox Selection and Ordering

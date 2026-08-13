@@ -1,6 +1,6 @@
 ---
 name: osb-integration-setup
-description: Step-by-step guide to integrate Open Second Brain with Hermes, covering cron jobs, MCP configuration, sensitivity tuning, and verification.
+description: Use when wiring Open Second Brain into Hermes (cron, MCP, tuning, verify).
 version: 1.0.0
 author: Hermes Agent
 license: MIT

@@ -2,7 +2,7 @@
 name: review
 preamble-tier: 4
 version: 1.0.0
-description: Pre-landing PR review. (gstack)
+description: Use when doing a pre-landing PR review.
 allowed-tools:
   - Bash
   - Read

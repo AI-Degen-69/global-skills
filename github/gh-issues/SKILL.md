@@ -1,6 +1,6 @@
 ---
 name: gh-issues
-description: "Create, triage, label, assign GitHub issues via gh or REST."
+description: Use when create, search, triage, and manage GitHub issues. Each section shows gh first, then the curl fallback
 version: 1.1.0
 author: Hermes Agent
 license: MIT

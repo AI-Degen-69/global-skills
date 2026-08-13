@@ -1,6 +1,6 @@
 ---
 name: codebase-inspection
-description: "Inspect codebases w/ pygount: LOC, languages, ratios."
+description: Use when inspecting a codebase's LOC, languages, and ratios.
 version: 1.0.0
 author: Hermes Agent
 license: MIT

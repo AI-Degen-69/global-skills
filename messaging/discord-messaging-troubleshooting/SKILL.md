@@ -1,6 +1,6 @@
 ---
 name: discord-messaging-troubleshooting
-description: Diagnose and fix Hermes Discord messaging gateway issues.
+description: Use when - Discord messages are not arriving in Hermes or from Hermes
 version: 0.1.0
 author: Hermes
 platforms:

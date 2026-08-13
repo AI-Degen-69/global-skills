@@ -1,6 +1,6 @@
 ---
 name: vault-umbrella
-description: "Use when operating Robert's Obsidian vault and choosing the correct focused Vault skill for ingestion, retrieval, audit-fix, graph hygiene, outputs, cron ingestion, or external workflow evaluation."
+description: Use when operating Robert's Obsidian vault and choosing the correct focused Vault skill for ingestion, retriev
 version: 1.0.0
 author: Hermes Agent
 license: MIT

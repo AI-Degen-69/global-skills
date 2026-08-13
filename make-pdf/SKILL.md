@@ -2,7 +2,7 @@
 name: make-pdf
 preamble-tier: 1
 version: 1.0.0
-description: Turn any markdown file into a publication-quality PDF. (gstack)
+description: Use when turning a markdown file into a publication-quality PDF.
 triggers:
   - markdown to pdf
   - generate pdf

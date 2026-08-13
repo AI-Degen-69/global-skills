@@ -1,7 +1,7 @@
 ---
 name: retrieval-reflex
 version: 0.1.0
-description: When/what to retrieve — open the brain page for a salient entity before answering from memory.
+description: Use when deciding what to retrieve from the brain (open the page).
 triggers:
   - "who is"
   - "what do we know about"
