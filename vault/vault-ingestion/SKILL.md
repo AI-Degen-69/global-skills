@@ -1,6 +1,6 @@
 ---
 name: vault-ingestion
-description: "Use when ingesting selected files, URLs, or inbox items into Robert's Obsidian vault. Always perform the full canonical process: preserve raw source, create or update wiki material, links, logs, audit-fix, and a post-ingestion report."
+description: Use when ingesting selected files, URLs, or inbox items into Robert's Obsidian vault. Always perform the full 
 version: 1.0.0
 author: Hermes Agent
 license: MIT
@@ -39,11 +39,12 @@ Every completed ingestion must have:
 - target domain `wiki/log.md` updated;
 - the original intake item either moved out of `_Inbox/` or explicitly cleared as a verified duplicate-resolution;
 - an audit-fix pass run afterward;
+- **the target domain `wiki/index.md` regenerated via `python3 scripts/build_index.py "<Domain>"` (run `build_index.py --check` first; back up before a domain-wide build because the generator flattens custom ordering) — hand-editing the index is not an acceptable substitute;**
 - a post-ingestion summary report generated.
 
 ## Procedure
 
-Follow `references/canonical-ingestion-flow.md` exactly. **Speed optimization (DEFAULT execution layer):** for the mechanical steps (raw preserve, durable writes, audit), use the `vault-ingest-streamlined` skill — `mv` the raw instead of read-then-write, batch independent writes, pre-check + create missing wikilink targets, and verify with a path-filtered audit. This does NOT lower the quality bar. Use `references/approval-gates.md` when deciding what must stop for Robert. For already-ingested source recaptures, also use `references/duplicate-recapture-resolution.md`. If the existing canonical raw has degraded into a placeholder/stub and the inbox file is a richer recapture of the same source, use `references/degraded-canonical-raw-repair.md`. For delegation timeout patterns, see `references/delegation-timeout-pattern.md`. For existing-first search execution and tool-selection rules, see `references/existing-first-search-patterns.md`. For sparse, truncated, or misleading inbox captures that do not actually contain the claimed source payload, use `references/sparse-source-stop-conditions.md` before widening search or creating any durable artifacts. For resumed sessions or any turn where tool work happened but the visible reply was empty/incomplete, use `references/resumed-ingestion-verification.md` before continuing or closing. For git-backed vaults where gbrain/queryability matters after ingest, use `references/gbrain-sync-visibility.md` before claiming the material is searchable.
+Follow `references/canonical-ingestion-flow.md` exactly. **Speed optimization (DEFAULT execution layer):** for the mechanical steps (raw preserve via `mv` instead of read-then-write, batch independent writes, pre-check + create missing wikilink targets, path-filtered audit) you may apply the streamlined pattern directly — this does NOT lower the quality bar. **Regardless of path, the index-build closeout is mandatory:** after durable writes, run `python3 scripts/build_index.py --check` and rebuild every stale domain (`build_index.py "<Domain>"`, back up first) — hand-editing `wiki/index.md` is never a substitute. Use `references/approval-gates.md` when deciding what must stop for Robert. For already-ingested source recaptures, also use `references/duplicate-recapture-resolution.md`. If the existing canonical raw has degraded into a placeholder/stub and the inbox file is a richer recapture of the same source, use `references/degraded-canonical-raw-repair.md`. For delegation timeout patterns, see `references/delegation-timeout-pattern.md`. For existing-first search execution and tool-selection rules, see `references/existing-first-search-patterns.md`. For sparse, truncated, or misleading inbox captures that do not actually contain the claimed source payload, use `references/sparse-source-stop-conditions.md` before widening search or creating any durable artifacts. For resumed sessions or any turn where tool work happened but the visible reply was empty/incomplete, use `references/resumed-ingestion-verification.md` before continuing or closing. For git-backed vaults where gbrain/queryability matters after ingest, use `references/gbrian-sync-visibility.md` before claiming the material is searchable.
 
 ## Reports and Special Cases
 

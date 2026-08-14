@@ -1,7 +1,6 @@
 ---
 name: hermes-model-optimization
-description: Select and configure cost-optimized models for Hermes Agent — main model and auxiliary slots. Use when the user wants to set up, review, or optimize their Hermes model configuration for value, quality, or cost savings. Also use after new flagship models drop and the user wants to reassess their aux model assignments.
-
+description: Use when tuning Hermes model slots (main vs auxiliary) for cost/quality.
 # Reference index
 # - references/auxiliary-title-generation-verification.md: verify Title generation auxiliary routing; manual session renames do not exercise the auxiliary model.
 # - references/fallback-provider-verification.md: verify Hermes fallback provider parsing and live failover activation; includes the dict-shape requirement for `fallback_providers` and a temp-home smoke test recipe.

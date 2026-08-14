@@ -1,0 +1,28 @@
+{
+  "intent": "concept",
+  "freshness_mode": "balanced_recent",
+  "cluster_mode": "none",
+  "subqueries": [
+    {
+      "label": "primary",
+      "search_query": "Public Service NYC house music dance party Toribio Mickey Perez",
+      "ranking_query": "What is Public Service in house music and who runs the Brooklyn outdoor dance party?",
+      "sources": ["reddit","x","youtube","tiktok","instagram","hackernews","polymarket"],
+      "weight": 1.0
+    },
+    {
+      "label": "sound",
+      "search_query": "Public Service NYC Karlala Soundsystem set house music",
+      "ranking_query": "What does Public Service NYC sound like and what music do Toribio and Mickey Perez play?",
+      "sources": ["youtube","instagram","tiktok","reddit"],
+      "weight": 0.7
+    },
+    {
+      "label": "community",
+      "search_query": "Public Service NYC free party Brooklyn community reception",
+      "ranking_query": "How is Public Service NYC received by the Brooklyn dance community and what makes it notable?",
+      "sources": ["reddit","instagram","youtube","tiktok"],
+      "weight": 0.6
+    }
+  ]
+}

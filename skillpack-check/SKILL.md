@@ -1,15 +1,7 @@
 ---
 name: skillpack-check
 version: 1.0.0
-description: |
-  Run `gbrain skillpack-check` to produce an agent-readable JSON health report
-  for the gbrain install. Wraps `gbrain doctor` + `gbrain apply-migrations
-  --list` so a host agent (your OpenClaw's morning-briefing, any OpenClaw cron)
-  can see at a glance whether the skillpack needs attention.
-
-  Use when the user asks "is gbrain healthy?", when a cron fires a morning
-  check, or proactively when something seems off (jobs not running, brain
-  not updating, autopilot silent).
+description: Use when running gbrain skillpack-check to audit a skill pack's health.
 triggers:
   - "skillpack check"
   - "is gbrain healthy"

@@ -1,6 +1,6 @@
 ---
 name: hermes-configuration
-description: "Use when configuring Hermes Agent settings, such as model/provider, dashboard port, toolsets, etc."
+description: Use when configuring Hermes Agent settings, such as model/provider, dashboard port, toolsets, etc."
 version: 1.0.0
 author: Hermes Agent
 license: MIT

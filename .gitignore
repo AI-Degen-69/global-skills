@@ -15,3 +15,6 @@ __pycache__/
 
 # Curator backup archives (too large for GitHub)
 .curator_backups/
+
+# Firecrawl runtime scrape output
+.firecrawl/

@@ -38,3 +38,15 @@ Page titles should be:
 - Short enough to scan in a list (under 60 characters)
 - NOT sentences ("Meeting with Pedro" not "Meeting with Pedro about the new deal structure")
 - NOT generic ("Pedro Franceschi" not "Person Page")
+
+## Global Response Formatting
+- **No Time Estimates**: Never include minute counts or time duration estimates in responses.
+- **Suggested Follow-ups Ending**: Always end responses with a `### Suggested Follow-ups` section containing exactly 3 options framed as actions the AI assistant will execute using "I'll..." phrasing (without "Option 1:", "Option 2:", etc.):
+  1. **(Recommended) I'll [action verb]**: Primary recommended next action I will execute with a short plain English description.
+  2. **I'll [action verb]**: Alternative direction I will execute with a short plain English description.
+  3. **I'll [action verb]**: Another variation I will execute with a short plain English description.
+- **Numbered Selection Execution**: When the user replies with a number (e.g. "1", "2", "3", "I choose 1"), immediately execute that numbered follow-up action.
+
+
+
+
