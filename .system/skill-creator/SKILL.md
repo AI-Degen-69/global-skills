@@ -1,6 +1,6 @@
 ---
 name: skill-creator
-description: "Use when the user wants to create or update a skill: write frontmatter, body, and bundled resources."
+description: Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.
 metadata:
   short-description: Create or update a skill
 ---
@@ -348,13 +348,10 @@ If you used `--examples`, delete any placeholder files that are not needed for t
 Write the YAML frontmatter with `name` and `description`:
 
 - `name`: The skill name
-- `description`: The primary triggering mechanism — it is the ONLY text the agent reads to decide whether to load the skill, so it must be precise and trigger-led.
-  - **Hard rules (enforced — no exceptions):**
-    - **Must start with `Use when`** and state the trigger in trigger-keyword style (e.g. "Use when the user wants to…", "Use when a PR has…"). Do not open with "Guide for…", "Tool for…", "Comprehensive…", or a synonym dump.
-    - **Max 110 characters.** If it runs long, cut the "what it does" fluff and keep only the trigger.
-    - Put ALL "when to use" signal here — never in the body. The body loads only after the skill triggers, so body "When to Use" sections are useless.
-  - **Good (≤110, trigger-led):** `Use when the user wants to create, read, edit, or review Word .docx files (tracked changes, formatting, extraction).`
-  - **Bad (>110, docs-style):** `Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. Use when Codex needs to work with professional documents…`
+- `description`: This is the primary triggering mechanism for your skill, and helps Codex understand when to use the skill.
+  - Include both what the Skill does and specific triggers/contexts for when to use it.
+  - Include all "when to use" information here - Not in the body. The body is only loaded after triggering, so "When to Use This Skill" sections in the body are not helpful to Codex.
+  - Example description for a `docx` skill: "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. Use when Codex needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks"
 
 Do not include any other fields in YAML frontmatter.
 
